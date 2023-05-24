@@ -14,3 +14,13 @@ def find_average(numbers):
 def reverse_words(s):
     list = " ".join(s.split(" ")[::-1])  #Whenever using .join always add the seperator at the start
     return list
+
+
+#Convert Boolean to a string
+def boolean_to_string(b):
+    if b == True :
+        return "True"
+    else :
+        return "False"
+
+
