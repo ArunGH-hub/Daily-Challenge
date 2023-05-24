@@ -23,4 +23,16 @@ def boolean_to_string(b):
     else :
         return "False"
 
+#return which quarter of the year we are in
+def quarter_of(month):
+    if month <=3 and month >= 1 :
+        return 1
+    elif month >= 4 and month <=6 :
+        return 2
+    elif month >= 7 and month <= 9 :
+        return 3
+    elif month >= 10 and month <= 12 :
+        return 4
+    else :
+        return "error - not a valid month"
 
