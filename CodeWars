@@ -47,3 +47,11 @@ def quarter_of(month):
         return 3
     elif month in range(10, 13):
         return 4
+        
+#Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+def shortcut(s):
+    for i in ["a","e","i","o","u"]:
+        if i in s:
+            s = s.replace(i,"")
+            
+        
