@@ -74,6 +74,15 @@ def hoop_count(n):
     else :
         return "Keep at it until you get it"
         
+  #return difference in volumes betwen two cubes
+  def cube(a,b) :
+    for i in a :
+        volume1 = a[0]*a[1]*a[2]
+    for i in b :
+        volume2 = b[0]*b[1]*b[2]
+        return abs(volume2 - volume1)
+        
+        
         
         
         
