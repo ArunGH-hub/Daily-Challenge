@@ -82,7 +82,11 @@ def hoop_count(n):
         volume2 = b[0]*b[1]*b[2]
         return abs(volume2 - volume1)
         
-        
+  import math
+def find_difference(a, b):
+    return abs(math.prod(a)-math.prod(b)) 
+
+#Import Math Prod function could be used instead      
         
         
         
