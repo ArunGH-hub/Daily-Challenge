@@ -102,3 +102,11 @@ def count_sheep(n):
     else :
         return (on+wait)-cap
 
+def excluding_vat_price(price):
+    if price is None  :
+        return -1
+    else :
+        return round(price/1.15,2) 
+#Write a function that calculates the original product price, without VAT.
+#Round the result to 2 decimal places.
+#If null value given then return -1
