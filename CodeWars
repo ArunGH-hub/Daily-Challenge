@@ -122,5 +122,15 @@ def feast(beast, dish):
 
 def no_space(x):
     return x.replace(" ","")
+    
+    
+ #write a function that calculates the average points from a list and then compares your test results vs the average
+
+def better_than_average(class_points, your_points):
+    average = sum(class_points) / len(class_points)
+    if your_points > average :
+        return True
+    else :
+        return False
 
 
