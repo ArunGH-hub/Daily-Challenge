@@ -134,3 +134,18 @@ def better_than_average(class_points, your_points):
         return False
 
 
+#basic function based on operators
+def basic_op(operator, value1, value2):
+    if operator == "*" :
+        return value1 * value2 
+    elif operator == "-" :
+        return value1 - value2
+    elif operator == "+" :
+        return value1 + value2 
+    elif operator == "/" :
+        return value1 / value2
+    else :
+        return "Operator not found"
+
+
+
