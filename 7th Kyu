@@ -1,0 +1,6 @@
+#You will be given a string of student names. Sort them and return a list of names in descending order.
+def lineup_students(string):
+        sorted_list = string.split(" ")
+        return sorted(sorted_list,key=len)[::-1]
+
+        
