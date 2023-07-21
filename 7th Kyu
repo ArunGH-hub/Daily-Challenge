@@ -9,4 +9,13 @@ def unscramble_eggs(word):
     return word.replace('egg','')
 
 
+#Write a function that takes a single string (word) as argument. The function must return an ordered list containing the indexes of all capital letters in the string.
 
+def capitals(word) :
+    arr=[]
+    for i in word :
+       if i.upper() == i :
+            index = word.index(i.upper())
+            arr.append(index)
+    return arr
+        
