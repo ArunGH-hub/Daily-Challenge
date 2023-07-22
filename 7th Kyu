@@ -29,5 +29,5 @@ def two_are_positive(a,b,c):
         arr.append(b)
     if c > 0 :
         arr.append(c)
-    return  True if len(arr) >= 2 else False  
+    return  True if len(arr) == 2 else False  
  
