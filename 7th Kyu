@@ -18,4 +18,16 @@ def capitals(word) :
             index = word.index(i.upper())
             arr.append(index)
     return arr
-        
+
+
+#Your job is to write a function, which takes three integers a, b, and c as arguments, and returns True if exactly two of of the three integers are positive numbers (greater than zero), and False - otherwise.        
+def two_are_positive(a,b,c):
+    arr = []
+    if a > 0 :
+        arr.append(a)
+    if b > 0 :
+        arr.append(b)
+    if c > 0 :
+        arr.append(c)
+    return  True if len(arr) >= 2 else False  
+ 
