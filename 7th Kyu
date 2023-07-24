@@ -31,3 +31,9 @@ def two_are_positive(a,b,c):
         arr.append(c)
     return  True if len(arr) == 2 else False  
  
+
+#function that calculates the volume of a cone
+import math
+def cup_volume(d1, d2, height):
+    volume = 1/3 * math.pi * height * ((d1/2)**2 + (d2/2)**2 + d1/2 * d2/2) #formula for volume of a cone
+    return volume
