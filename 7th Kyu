@@ -52,7 +52,8 @@ def cat_mouse(x):
 
 def high_and_low(numbers):
     split = numbers.split(" ")
-    return str(max(split)) + " " + str(min(split))
+    integer_list = [int(i) for i in split]
+    return str(max(integer_list)) + " " + str(min(integer_list))
 
 #In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
     
