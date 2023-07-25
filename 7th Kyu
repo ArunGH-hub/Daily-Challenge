@@ -49,3 +49,12 @@ def cat_mouse(x):
     else :
         return "Escaped!"
             
+
+def high_and_low(numbers):
+    split = numbers.split(" ")
+    return str(max(split)) + " " + str(min(split))
+
+#In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+    
+
+
