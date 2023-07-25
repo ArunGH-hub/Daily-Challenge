@@ -59,8 +59,10 @@ def high_and_low(numbers):
     
 
 def square_digits(num):
+    result = ""
     string_num = str(num)
-    new_list_of_digits = [int(i)**2 for i in string_num] #the int() converts it to an integer on each iteration
-    return sum(new_list_of_digits)
+    for i in string_num:
+        result += str(int(i)**2)
+    return result   
 
 #this is correct, using the sm function is easy here
