@@ -66,3 +66,16 @@ def square_digits(num):
     return result   
 
 #this is correct, using the sm function is easy here
+
+
+#our job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+        
+def get_middle(s):
+    odd_index = int(len(s) // 2)
+    even_index = int(len(s) / 2) #remember to include the letter after too
+    int_even = even_index + 1
+    if len(s) % 2 != 0 :
+        return s[odd_index]
+    else :
+        return s[even_index-1 :even_index+1]
+    
