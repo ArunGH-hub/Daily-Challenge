@@ -58,4 +58,9 @@ def high_and_low(numbers):
 #In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
     
 
+def square_digits(num):
+    string_num = str(num)
+    new_list_of_digits = [int(i)**2 for i in string_num] #the int() converts it to an integer on each iteration
+    return sum(new_list_of_digits)
 
+#this is correct, using the sm function is easy here
