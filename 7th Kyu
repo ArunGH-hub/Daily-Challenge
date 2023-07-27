@@ -79,3 +79,25 @@ def get_middle(s):
     else :
         return s[even_index-1 :even_index+1]
     
+
+#Groups of characters decided to make a battle. Help them to figure out which group is more powerful. Create a function that will accept 2 strings and return the one who's stronger.
+def battle(x,y):
+    dict = {"A":1, "B":2, "C":3,"D":4,"E":5,"F":6,"G":7,"H":8,"I":9,"J":10,"K":11,"L":12,"M":13,"N":14,"O":15,"P":16,"Q":17,"R":18,"S":19,"T":20,"U":21,"V":22,"W":23,"X":24,"Y":24,"Z":25}
+    #list_x = ",".join(x) #converts to a list #DON'T NEED THIS STEP
+    x_arr = []
+    for i in x :
+        result = dict[i]
+        x_arr.append(result)
+    
+    y_arr = []
+    for i in y :
+        result = dict[i]
+        y_arr.append(result)
+    
+    if sum(y_arr) > sum(x_arr) :
+        return y
+    elif sum(x_arr) > sum(y_arr) :
+        return x
+    else :
+        return "Tie!"
+
