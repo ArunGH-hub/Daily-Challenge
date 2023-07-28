@@ -155,4 +155,17 @@ def open_or_senior(data):
     return arr        
    
     
-#Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.    
+#Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+
+def printer_error(s):
+    len(s) >= 1
+    colours = ["a","b","c","d","e","f","g","h","i","j","k","l","m"]
+    result = []
+    for i in s :
+        if i not in colours :
+            result.append(i)
+    return str(len(result)) + "/" + str(len(s))
+             
+            
+#Sometimes there are problems: lack of colors, technical malfunction and a "bad" control string is produced e.g. aaaxbbbbyyhwawiwjjjwwm with letters not from a to m            
+
