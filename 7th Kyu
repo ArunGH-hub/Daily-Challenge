@@ -140,3 +140,19 @@ def xo(s):
         return True
     else :
         return False
+
+
+
+def open_or_senior(data):
+    arr1 = [] #age_list
+    arr2 = [] #handicap list
+    arr = []
+    for i in data:
+        if i[0] >= 55 and i[1] > 7 :
+            arr.append("Senior") 
+        else :
+            arr.append("Open")
+    return arr        
+   
+    
+#Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.    
