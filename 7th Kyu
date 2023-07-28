@@ -118,3 +118,12 @@ def friend(x):
         if len(i) == 4 :
             result.append(i)
     return result            
+
+#odd or even
+def odd_or_even(arr):
+    if arr == [] :
+        return "even"
+    elif sum(arr) % 2 == 0 :
+        return "even"
+    else :
+        return "odd"
