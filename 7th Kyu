@@ -109,3 +109,12 @@ def find_short(s):
 
 #ALTERNATIVE CORRECT SOLUTION here., you can use key = len for min
 
+
+#If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+def friend(x):
+    result = []
+    for i in x :
+        if len(i) == 4 :
+            result.append(i)
+    return result            
