@@ -179,3 +179,12 @@ def nb_year(p0, percent, aug, p):
     return result
 
 #In a small town the population is p0 = 1000 at the beginning of a year. The population regularly increases by 2 percent per year and moreover 50 new inhabitants per year come to live in the town.
+
+
+#You are given an odd-length array of integers, in which all of them are the same, except for one single number.
+def stray(arr):
+    result = 0
+    for i in arr:
+         if arr.count(i) == 1 :
+                result += i
+    return result  
