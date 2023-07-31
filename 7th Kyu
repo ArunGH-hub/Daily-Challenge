@@ -188,3 +188,15 @@ def stray(arr):
          if arr.count(i) == 1 :
                 result += i
     return result  
+
+
+#Mr. Scrooge has a sum of money 'P' that he wants to invest. Before he does, he wants to know how many years 'Y' this sum 'P' has to be kept in the bank in order for it to amount to a desired sum of money 'D'.
+
+def calculate_years(P, interest, tax, desired):
+    years = 0
+    income_tax = P * interest * tax
+    result = (P * interest+1) - income_tax
+    while P < desired :
+        P += result
+        years += 1 
+    return years    
