@@ -205,4 +205,21 @@ def calculate_years(P, interest, tax, desired):
 def two_oldest_ages(ages):
     return sorted(ages)[-2:]
 
+#In this Kata, you will be given a string that may have mixed uppercase and lowercase letters and your task is to convert that string to either lowercase only or uppercase only based on:make as few changes as possible.
+#if the string contains equal number of uppercase and lowercase letters, convert the string to lowercase.
 
+def solve(s) :
+    upper_string = ""
+    lower_string = ""
+    for i in s :
+        if i == i.upper() :
+            upper_string += i.upper()
+        elif i == i.lower() :
+            lower_string += i.lower()
+    
+    if len(lower_string) >= len(upper_string) :
+        return s.lower()
+    else :
+        return s.upper()
+        
+        
