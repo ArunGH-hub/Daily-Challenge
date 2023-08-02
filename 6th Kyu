@@ -37,3 +37,11 @@ def likes(names) :
 def create_phone_number(n):
     return "(%s%s%s) %s%s%s-%s%s%s%s" % (n[0],n[1],n[2],n[3],n[4],n[5],n[6],n[7],n[8],n[9])
     
+
+
+#Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+
+def count_bits(n):
+    result = bin(int(n))
+    return result.count("1")
+    
