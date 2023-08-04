@@ -60,6 +60,11 @@ def find_outlier(integers):
     elif len(odd) > len(even) :
         return even[0]
     
-            
-        
 
+Given an array of integers, find the one that appears an odd number of times.
+def find_it(seq):
+    result = []
+    for i in seq :
+        if seq.count(i) % 2 != 0 :
+            result.append(i)
+    return result[0]      
