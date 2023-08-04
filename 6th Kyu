@@ -68,3 +68,18 @@ def find_it(seq):
         if seq.count(i) % 2 != 0 :
             result.append(i)
     return result[0]      
+
+
+
+#Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string
+
+def duplicate_count(text):
+    result = []
+    text = text.lower() #makes it case insensitive
+    for i in text :
+        if text.count(i) > 1 :
+            result.append(i)
+    return len(set(result))
+
+
+     
