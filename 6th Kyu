@@ -95,5 +95,12 @@ def narcissistic( value ):
         return False
 
 
+##There is an array with some numbers. All numbers are equal except for one. Try to find it!
 
+def find_uniq(arr):
+    result = []
+    for i in arr :
+        if arr.count(i) == 1 :
+            result.append(i)
+    return result[0] 
      
