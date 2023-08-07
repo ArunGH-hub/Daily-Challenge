@@ -243,3 +243,13 @@ def longest(a1, a2):
     return sorted_string
             
 
+def get_count(sentence):
+    result = []
+    vowels = ["a","o","e","i","u"]
+    for i in sentence :
+        if i in vowels :
+            result.append(i)
+    return len(result)        
+
+
+#return number of vowels in a given string
