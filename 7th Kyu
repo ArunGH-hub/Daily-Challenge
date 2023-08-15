@@ -242,14 +242,29 @@ def longest(a1, a2):
     sorted_string = "".join(sorted(result)) #how to sort a string
     return sorted_string
             
-
+#return number of vowels in a given string
 def get_count(sentence):
     result = []
     vowels = ["a","o","e","i","u"]
     for i in sentence :
         if i in vowels :
             result.append(i)
-    return len(result)        
+    return len(result)
 
 
-#return number of vowels in a given string
+#Your task is to capitalize every word that has length greater than 2, leaving smaller words as they are.
+def drop_cap(words):
+    normalised_word = words.split(" ")
+    result = []
+    for i in normalised_word :
+        if len(i) > 2 :
+            result.append(i[0].upper() + i[1:].lower())
+        else :
+            result.append(i)
+    return " ".join(result)
+
+#correct soltuion
+
+
+
+
