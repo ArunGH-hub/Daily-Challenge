@@ -266,5 +266,19 @@ def drop_cap(words):
 #correct soltuion
 
 
+def disemvowel(string_):
+    res = ""
+    vowels = ["a","e","i","o","u"]
+    for i in string_ :
+        if i.lower() not in vowels :
+            res += i
+    return res        
+
+#remove vowels
+
+
+
+
+
 
 
