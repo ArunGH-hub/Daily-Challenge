@@ -303,4 +303,7 @@ def gimme(triplet) :
     return result[0]
         
 
+#Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
+a = ["Telescopes", "Glasses", "Eyes", "Monocles"]
 
+sorted(a,key=len)
