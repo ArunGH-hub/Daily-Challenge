@@ -307,3 +307,11 @@ def gimme(triplet) :
 a = ["Telescopes", "Glasses", "Eyes", "Monocles"]
 
 sorted(a,key=len)
+
+
+
+
+#plement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+def add_binary(a,b):
+    result = str(bin(a+b))
+    return result[2:]
