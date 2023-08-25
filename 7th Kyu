@@ -334,3 +334,23 @@ def words_to_marks(s):
     return count    
 
 
+def alphabet_war(fight):
+    left_side_dict = {"w":4, "p":3,"b":2,"s":1}
+    right_side_dict = {"m":4,"q":3,"d":2,"z":1}
+    left_res = 0
+    right_res = 0
+    for i in fight :
+        if i in left_side_dict : 
+            left_res += left_side_dict[i]
+        if i in right_side_dict :
+            right_res += right_side_dict[i]
+    if left_res > right_res :
+        return "Left side wins!"
+    elif right_res > left_res :
+        return "Right side wins!"
+    else :
+        return "Let's fight again!"
+    
+# Write a function that accepts fight string consists of only small letters and return who wins the fight. When the left side wins return Left side wins!, when the right side wins return Right side wins!, in other case return Let's fight again   
+    
+    
