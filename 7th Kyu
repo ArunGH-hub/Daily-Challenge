@@ -322,3 +322,15 @@ def add_binary(a,b):
 def round_to_next5(n) :
     import math
     return math.ceil(n/5) * 5
+
+
+#Your task is to write a function which calculates the value of a word based off the sum of the alphabet positions of its characters.
+
+def words_to_marks(s):
+    count = 0 
+    for i in s :
+        value_of_word = ord(str(i))-96
+        count += value_of_word
+    return count    
+
+
