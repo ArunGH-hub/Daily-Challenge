@@ -353,4 +353,7 @@ def alphabet_war(fight):
     
 # Write a function that accepts fight string consists of only small letters and return who wins the fight. When the left side wins return Left side wins!, when the right side wins return Right side wins!, in other case return Let's fight again   
     
-    
+def even_numbers(arr,n):
+    result = []
+    even_list = [int(i) for i in arr if i % 2 == 0]
+    return even_list[-n:]         
