@@ -357,3 +357,12 @@ def even_numbers(arr,n):
     result = []
     even_list = [int(i) for i in arr if i % 2 == 0]
     return even_list[-n:]         
+
+
+#Given an array of positive integers (the weights of the people), return a new array/tuple of two integers, where the first one is the total weight of team 1, and the second one is the total weight of team 2.
+
+def row_weights(array):
+    team_1 = sum(array[::2])
+    team_2 = sum(array[1::2])
+    res = [team_1, team_2]
+    return res
