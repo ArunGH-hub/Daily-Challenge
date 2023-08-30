@@ -368,21 +368,6 @@ def row_weights(array):
     return res
 
 
-#Return an array containing the numbers from 1 to N, where N is the parametered value. Replace certain values however if any of the following conditions are met:
 
-def fizzbuzz(n):
-    result = []
-    new_list = [int(i) for i in range(1,n+1)] 
-    for i in new_list :
-        if i % 3 == 0 :
-            result.append("Fizz")
-        elif i % 5 == 0 :
-            result.append("Buzz")
-        elif i % 3 == 0 and i % 5 == 0 :
-            result.append("FizzBuzz")
-        else :
-            result.append(i)
-    return result        
-            
             
 
