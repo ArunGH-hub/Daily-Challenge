@@ -385,5 +385,11 @@ def fizzbuzz(n):
     return result        
             
             
+#Write a method that takes one argument as name and then greets that name, capitalized and ends with an exclamation point.
+
+def greet(name): 
+    name = name.lower()
+    final_name = name.capitalize()
+    return "Hello %s!" %final_name
             
 
