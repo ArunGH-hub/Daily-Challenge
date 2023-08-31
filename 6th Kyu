@@ -111,3 +111,12 @@ def array_diff(a, b):
         if i not in b :
             result.append(i)
     return result    
+
+
+
+def parts_sums(ls):
+    result = []
+    for i in range(len(ls)) :
+        result.append(ls[i:])
+    result.append([])
+    return list(map(sum,result))
