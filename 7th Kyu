@@ -393,3 +393,8 @@ def greet(name):
     return "Hello %s!" %final_name
             
 
+#Given a string str, reverse it and omit all non-alphabetic characters.
+
+def reverse_letter(string):
+    new_str = [str(i) for i in string if i.isalpha() is True]
+    return "".join(new_str)[::-1]
