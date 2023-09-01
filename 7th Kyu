@@ -398,3 +398,13 @@ def greet(name):
 def reverse_letter(string):
     new_str = [str(i) for i in string if i.isalpha() is True]
     return "".join(new_str)[::-1]
+
+
+#Find the number with the most digits. If two numbers in the argument array have the same number of digits, return the first one in the array.
+
+def find_longest(arr):
+    lengths = [len(str(i)) for i in arr] 
+    int_lengths = sorted([int(i) for i in lengths]) #convert the lengths to integer and sort the list
+    new_arr = [int(i) for i in arr if len(str(i)) == int_lengths[-1]]
+    return new_arr[0]
+
