@@ -120,3 +120,30 @@ def parts_sums(ls):
         result.append(ls[i:])
     result.append([])
     return list(map(sum,result))
+
+
+#For example, encode("hello") would return "h2ll4". There is no need to worry about uppercase vowels in this kata.
+def encode(st):
+    dict = {"a":"1","e":"2","i":"3","o":"4","u":"5"}
+    vowels = "aeiou"
+    result = ""
+    new_st = [str(i) for i in st]
+    for i in new_st :
+        if i == i.lower() and i in vowels :
+            result += dict[i]
+        else :
+            result += i
+    return result       
+
+def decode(st) :
+    dict = {"1":"a","2":"e","3":"i","4":"o","5":"u"}
+    numbers = "12345"
+    result = ""
+    new_st = [str(i) for i in st]
+    for i in new_st :
+        if i in numbers :
+            result += dict[i]
+        else :
+            result += i
+    return result        
+
