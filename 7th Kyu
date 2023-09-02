@@ -408,3 +408,18 @@ def find_longest(arr):
     new_arr = [int(i) for i in arr if len(str(i)) == int_lengths[-1]]
     return new_arr[0]
 
+
+#Given a number, write a function to output its reverse digits. (e.g. given 123 the answer is 321). Numbers should preserve their sign; i.e. a negative number should still be negative when reversed.
+
+def reverse_number(n):
+    if n < 0 :
+        n = abs(n)
+        new_n = "".join([str(i) for i in str(n)])
+        return - int(new_n[::-1])
+    else :
+        new_n = "".join([str(i) for i in str(n)])
+        return int(new_n[::-1])
+    
+   
+
+
