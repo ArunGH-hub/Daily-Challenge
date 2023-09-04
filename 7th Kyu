@@ -427,3 +427,18 @@ def sum_cubes(n):
     new = [int(i)**3 for i in range(1,n+1)]
     return sum(new)
 
+
+##Write a program to determine if a string contains only unique characters. Return true if it does and false otherwise.
+
+
+def has_unique_chars(string):
+    new = [str(i) for i in string]
+    for i in new :
+        i == i.lower()
+        if new.count(i) > 1 :
+            return False
+        else :
+            return True
+
+        
+
