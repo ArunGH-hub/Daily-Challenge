@@ -145,5 +145,16 @@ def decode(st) :
             result += dict[i]
         else :
             result += i
+
+
+
+#Complete the method which returns the number which is most frequent in the given input array. If there is a tie for most frequent number, return the largest number among them
+
+def highest_rank(arr):
+    res = []
+    check = sorted([arr.count(i) for i in arr]) #list of sorted counts of each number
+    new = [int(i) for i in arr if arr.count(i) == check[-1]] #returns an array of all the highest counting integers
+    return max(new)
+
     return result        
 
