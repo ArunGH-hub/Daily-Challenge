@@ -440,5 +440,9 @@ def has_unique_chars(string):
         else :
             return True
 
-        
+ #Given an array/list of integers, find the Nth smallest element in the array.    
+
+def nth_smallest(arr, pos):
+    new_arr = sorted(arr)
+    return new_arr[pos-1]
 
