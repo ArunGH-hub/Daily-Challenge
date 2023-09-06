@@ -455,4 +455,12 @@ def men_from_boys(arr):
     return even_list + odd_list
     
 
+#Solve("*'&ABCDabcde12345") = [4,5,5,3]. the order is: uppercase letters, lowercase, numbers and special characters.
 
+def solve(s):
+    uppercase = len([str(i) for i in s if i == i.upper() and i.isalpha() is True]) 
+    lowercase = len([str(i) for i in s if i == i.lower() and i.isalpha() is True])
+    numbers = len([str(i) for i in s if i.isdigit() is True])
+    special = len([str(i) for i in s if i.isalpha() is not True and i.isdigit() is not True])
+    res = [uppercase,lowercase,numbers,special]
+    return res
