@@ -490,3 +490,21 @@ def find_digit(num, nth):
         return 0
     else :
         return int(num[-nth])
+
+
+
+#Given a string s. You have to return another string such that even-indexed and odd-indexed characters of s are grouped and groups are space-separated (see sample below)
+
+
+
+def sort_my_string(s):
+    even_result = []
+    odd_result = []
+    for i,c in enumerate(s) : #enumerate is useful because it iterates an item and returns both the index position and value
+        if i % 2 == 0 :
+            even_result.append(c)
+        else :
+            odd_result.append(c)
+    return "%s %s" % ("".join(even_result),"".join(odd_result))       
+        
+
