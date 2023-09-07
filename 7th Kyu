@@ -478,4 +478,15 @@ def find_deleted_number(arr, mixed_arr):
     return result       
                 
 
+#Complete the function that takes two numbers as input, num and nth and return the nth digit of num (counting from right to left).
 
+def find_digit(num, nth):
+    num = str(abs(num))
+    if nth < 1 :
+        return -1
+    elif len(str(nth)) > len(num) :
+        return 0
+    elif int(str(nth)) > len(str(num)) :
+        return 0
+    else :
+        return int(num[-nth])
