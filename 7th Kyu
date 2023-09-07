@@ -464,3 +464,18 @@ def solve(s):
     special = len([str(i) for i in s if i.isalpha() is not True and i.isdigit() is not True])
     res = [uppercase,lowercase,numbers,special]
     return res
+
+
+
+#An ordered sequence of numbers from 1 to N is given. One number might have deleted from it, then the remaining numbers were mixed. Find the number that was deleted.
+def find_deleted_number(arr, mixed_arr):
+    result = 0
+    for i in arr : 
+        if i not in mixed_arr : 
+            result += i 
+        else :
+            result 
+    return result       
+                
+
+
