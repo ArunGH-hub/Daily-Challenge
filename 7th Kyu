@@ -508,3 +508,11 @@ def sort_my_string(s):
     return "%s %s" % ("".join(even_result),"".join(odd_result))       
         
 
+#Create a function that returns a sorted list of (key, value) tuples (Javascript: arrays of 2 items).
+
+The list must be sorted by the value and be sorted largest to smallest.
+
+def sort_dict(d):
+    result = []
+    tuple_d = d.items()
+    return sorted(tuple_d,key = lambda x : x[1],reverse=True) #sorts based on value need to use x[1]
