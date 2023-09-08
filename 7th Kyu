@@ -516,3 +516,14 @@ def sort_dict(d):
     result = []
     tuple_d = d.items()
     return sorted(tuple_d,key = lambda x : x[1],reverse=True) #sorts based on value need to use x[1]
+
+
+#e want to generate a function that computes the series starting from 0 and ending until the given number.
+
+def show_sequence(n):
+    if n == 0 :
+        return "0=0" 
+    elif n < 0 :
+        return "%s<0" % (str(n))
+    else :
+        return "+".join((map(str,range(n+1)))) + " = " + str(sum(list(range(n+1)))) 
