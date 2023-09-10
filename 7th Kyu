@@ -527,3 +527,11 @@ def show_sequence(n):
         return "%s<0" % (str(n))
     else :
         return "+".join((map(str,range(n+1)))) + " = " + str(sum(list(range(n+1)))) 
+
+
+#Given a string, turn each character into its ASCII character code and join them together to create a number - let's call this number total1:Then replace any incidence of the number 7 with the number 1, and call this number 'total2':
+
+def calc(x) :
+    total1 =  sum([int(ord(i)) for i in str(x)]) #string is iterable, not int
+    total2 = sum([int(str(int(ord(i))).replace("7","1")) for i in str(x)]) #iterating back to int
+    return total1 - total2
