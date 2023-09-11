@@ -535,3 +535,12 @@ def calc(x) :
     total1 =  sum([int(ord(i)) for i in str(x)]) #string is iterable, not int
     total2 = sum([int(str(int(ord(i))).replace("7","1")) for i in str(x)]) #iterating back to int
     return total1 - total2
+
+
+#Given an array/list [] of integers , Find the product of the k maximal numbers.
+import math
+def max_product(lst, n_largest_elements):
+    sorted_list = sorted(lst)[-n_largest_elements:]
+    return math.prod(sorted_list)
+
+
