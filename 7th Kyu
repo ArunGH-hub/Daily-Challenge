@@ -544,3 +544,13 @@ def max_product(lst, n_largest_elements):
     return math.prod(sorted_list)
 
 
+#Given a string and an array of integers representing indices, capitalize all letters at the given indices.
+
+def capitalize(s, ind):
+    result = []
+    for i,c in enumerate(s) :
+        if i in ind :
+            result.append(c.upper())
+        else :
+            result.append(c)
+    return "".join(result)  
