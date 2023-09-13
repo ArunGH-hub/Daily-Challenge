@@ -588,4 +588,17 @@ def solve(a,b):
     for i in b :
         if i not in a :
             res.append(i)
-    return "".join(res)        
+    return "".join(res)
+
+
+#Return a string suggesting how many glasses of water you should drink to not be hungover.
+
+def hydrate(drink_string):
+    new = drink_string.split()
+    water = sum([int(i) for i in drink_string if str(i).isdigit()])
+    if water == 1 :
+        return "%s glass of water" % (water)
+    elif water > 1 :
+        return "%s glasses of water" % (water)
+    
+
