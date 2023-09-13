@@ -554,3 +554,17 @@ def capitalize(s, ind):
         else :
             result.append(c)
     return "".join(result)  
+
+
+
+#You are given a string of letters and an array of numbers. The numbers indicate positions of letters that must be removed, in order, starting from the beginning of the array.
+
+def last_survivor(letters, coords): 
+    new = list(map(str,letters))
+    for i in coords :
+        new.pop(i)
+    return "".join(new)    
+        
+      
+        
+        
