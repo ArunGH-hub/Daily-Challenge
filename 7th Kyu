@@ -566,5 +566,15 @@ def last_survivor(letters, coords):
     return "".join(new)    
         
       
-        
+  #Capitalise all vowels
+
+def swap(st):
+    result = []
+    for i in st :
+        if i in "aeiou" :
+            result.append(i.upper())
+        else :
+            result.append(i)
+    return "".join(result)        
+                  
         
