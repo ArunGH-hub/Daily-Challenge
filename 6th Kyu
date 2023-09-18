@@ -158,3 +158,16 @@ def highest_rank(arr):
 
     return result        
 
+#Given a positive integer of up to 16 digits, return true if it is a valid credit card number, and false if it is not.
+
+def validate(n):
+    num = [int(i) for i in str(n)]
+    res = []
+    updated_res = []
+    for i in num :
+        if i in num[-2::-2] :
+            res.append(i*2)
+        else :
+            res.append(i)
+    new = [int(i-9) if i > 9 else int(i) for i in res]#new_list = [expression_if_true if condition else expression_if_false for item in iterable]
+    return sum(new) % 10 == 0
