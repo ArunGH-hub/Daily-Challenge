@@ -624,3 +624,22 @@ def difference_of_squares(n):
     sum_sq_ints = sum([int(i)**2 for i in range(1,n+1)])
     return sum_num_sq - sum_sq_ints
 
+
+Complete the solution so that it returns a formatted string. The return value should equal "Value is VALUE" where value is a 5 digit padded number.
+
+def solution(value):
+    if len(str(value)) == 1 :
+        return "Value is 0000%s"% value
+    elif len(str(value)) == 2 :
+        return "Value is 000%s" % value
+    elif len(str(value)) == 3 : 
+        return "Value is 00%s" % value
+    elif len(str(value)) == 4 :
+        return "Value is 0%s" % value
+    else :
+        return "Value is %s" % value
+    
+    
+    
+    
+    
