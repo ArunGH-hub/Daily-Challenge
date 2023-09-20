@@ -693,3 +693,14 @@ def max_gap(numbers):
         diff = abs(numbers[i+1]-numbers[i])
         res.append(diff)
     return max(res)    
+
+
+#In this exercise, a string is passed to a method and a new string has to be returned with the first character of each word in the string.
+
+def make_string(s):
+    s = s.split()
+    res = []
+    for i in s :
+        res.append(i[0])
+    return "".join(res)    
+        
