@@ -704,3 +704,10 @@ def make_string(s):
         res.append(i[0])
     return "".join(res)    
         
+
+#At some point during the walk the boy encounters a house with number 0 written on it, which surprises him so much that he stops adding numbers to his total right after seeing that house.
+
+def house_numbers_sum(inp):
+    zero_index = inp.index(0)
+    return sum(inp[0:zero_index])
+
