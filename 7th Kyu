@@ -682,3 +682,14 @@ def switcher(arr):
 
 def filter_lucky(lst):
     return [int(i) for i in lst if "7" in str(i)]
+
+
+#Given an array/list [] of integers , Find The maximum difference between the successive elements in its sorted form.
+
+def max_gap(numbers):
+    res = []
+    numbers = sorted(numbers)
+    for i in range(len(numbers)-1) :
+        diff = abs(numbers[i+1]-numbers[i])
+        res.append(diff)
+    return max(res)    
