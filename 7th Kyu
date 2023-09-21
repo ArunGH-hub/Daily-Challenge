@@ -711,3 +711,14 @@ def house_numbers_sum(inp):
     zero_index = inp.index(0)
     return sum(inp[0:zero_index])
 
+
+#omplete the method which accepts an array of integers, and returns one of the following
+
+def is_sorted_and_how(arr): 
+    if arr == sorted(arr) :
+        return "yes, ascending" 
+    elif arr == sorted(arr,reverse= True) :
+        return "yes, descending"
+    else :
+        return "no"
+
