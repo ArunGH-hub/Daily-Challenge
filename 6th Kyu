@@ -171,3 +171,18 @@ def validate(n):
             res.append(i)
     new = [int(i-9) if i > 9 else int(i) for i in res]#new_list = [expression_if_true if condition else expression_if_false for item in iterable]
     return sum(new) % 10 == 0
+
+
+
+#Take a Number And Sum Its Digits Raised To The Consecutive Powers And ....¡Eureka!!
+
+
+import math
+def sum_dig_pow(a, b):
+    res = []
+    for i, c in enumerate(range(a, b + 1)):
+        num_str = str(c)
+        digit_sum = sum([int(x)**(i + 1) for i, x in enumerate(num_str)])
+        if digit_sum == c:
+            res.append(c)
+    return res
