@@ -186,3 +186,15 @@ def sum_dig_pow(a, b):
         if digit_sum == c:
             res.append(c)
     return res
+
+
+#Write a method (or function, depending on the language) that converts a string to camelCase, that is, all words must have their first letter capitalized and spaces must be removed.
+
+
+def camel_case(s):
+    s = s.split()
+    res = []
+    for i in s :
+        res.append(i.capitalize())
+    return "".join(res)    
+        
