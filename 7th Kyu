@@ -809,3 +809,15 @@ def check_three_and_two(array):
         return False
   
                    
+#Create a function that returns the smallest number of turns it takes to transform the lock from the current combination to the target combination. One turn is equivalent to rolling a number forwards or backwards by one.
+
+def min_turns(current, target):
+    digits = list(range(0,10))
+    current_lock = [int(i) for i in str(current)]
+    target_lock = [int(i) for i in str(target)]
+    turns = 0
+    for i in range(len(current_lock)) : #4 digit lock
+        forward_difference = abs(current_lock[i] - target_lock[i])
+        backward_difference = abs(10 - forward_difference)
+        turns += (min(forward_difference,backward_difference))
+    return turns    
