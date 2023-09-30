@@ -836,3 +836,11 @@ def bingo(array):
         return "WIN"
     else :
         return "LOSE"
+
+
+#Mumbling
+#This time no story, no theory. The examples below show you how to write function accum:
+
+def accum(s):
+    return "-".join([(str(c)*i).capitalize() for i,c in enumerate(s,start=1)])
+
