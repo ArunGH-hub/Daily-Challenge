@@ -850,3 +850,14 @@ def accum(s):
 def filter_list(l):
     return [int(i) for i in l if type(i)==int]
 
+#Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
+
+def remove_smallest(numbers):
+    if numbers == [] :
+        return []
+    else :
+        min_num = str(min(numbers)) #convert to str
+        new = [str(i) for i in numbers]
+        min_num_index = new.index(min_num) #picks the first indexed minimum
+        new.pop(min_num_index) #removes the first indexed minimum
+        return list(map(int,new))
