@@ -873,3 +873,11 @@ def remove_smallest(numbers):
 def pattern(n):
     return "".join([str(c)+"\n1"+(i*"*") for i,c in enumerate(range(1,n),start=1)]) + str(n)
 
+
+#An element is leader if it is greater than The Sum all the elements to its right side.
+def array_leaders(numbers):
+    res = []
+    for i,c in enumerate(numbers) :
+        if numbers[i] > sum(numbers[i+1:]) :
+            res.append(c)
+    return res
