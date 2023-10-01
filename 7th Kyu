@@ -881,3 +881,12 @@ def array_leaders(numbers):
         if numbers[i] > sum(numbers[i+1:]) :
             res.append(c)
     return res
+
+
+#In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+def high_and_low(numbers):
+    numbers = numbers.split()
+    new = list(map(int,numbers))
+    return f"{max(new)} {min(new)}"
+
