@@ -926,3 +926,14 @@ def longest_word(string_of_words):
     else :
         return False
         
+
+
+#However, when a noun STARTS and ENDS with the same letter, she likes to repeat the noun twice and connect them together with the first and last letter, combined into one word (WITHOUT "The" in front)
+
+def band_name_generator(name):
+    if len(name) == 1 :
+        return name.capitalize()
+    elif name[0] == name[-1] :
+        return f"{name[:-1].capitalize()}{name}"
+    else :
+        return f"The {name.capitalize()}"
