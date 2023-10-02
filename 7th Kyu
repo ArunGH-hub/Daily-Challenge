@@ -900,3 +900,16 @@ def get_larger_numbers(a, b):
         res.append(max(i))
     return res    
         
+
+#Determine if the poker hand is flush, meaning if the five cards are of the same suit.
+
+def is_flush(cards):
+    suites = ["H","S","D","C"]
+    res = []
+    for word in cards :
+        res.append(word[-1])
+    if len(set(res)) == 1 : #royal flush
+        return True
+    else :
+        return False
+        
