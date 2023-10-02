@@ -909,6 +909,19 @@ def is_flush(cards):
     for word in cards :
         res.append(word[-1])
     if len(set(res)) == 1 : #royal flush
+
+
+#When given a string of space separated words, return the word with the longest length. If there are multiple words with the longest length, return the last instance of the word with the longest length.
+
+def longest_word(string_of_words):
+    new = string_of_words.split()
+    res = []
+    max_word = max([len(i) for i in new]) #max length word
+    for i in new :
+        if len(i) == max_word :
+            res.append(i)
+    return res[-1]        
+
         return True
     else :
         return False
