@@ -890,3 +890,13 @@ def high_and_low(numbers):
     new = list(map(int,numbers))
     return f"{max(new)} {min(new)}"
 
+
+#In this Kata the aim is to compare each pair of integers from 2 arrays, and return a new array of large numbers.
+
+def get_larger_numbers(a, b):
+    new = list(zip(a,b))
+    res = []
+    for i in new :
+        res.append(max(i))
+    return res    
+        
