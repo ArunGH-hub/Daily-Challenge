@@ -937,3 +937,21 @@ def band_name_generator(name):
         return f"{name[:-1].capitalize()}{name}"
     else :
         return f"The {name.capitalize()}"
+
+
+
+#Write a function, nicknameGenerator that takes a string name as an argument and returns the first 3 or 4 letters as a nickname.
+
+def nickname_generator(name):
+    vowels = "aeiou"
+    if len(name) < 4 :
+        return "Error: Name too short"
+    else :
+        for i in name[2] :
+            if i not in vowels :
+                return name[:3]
+            if i in vowels :
+                return name[:4]
+            
+        
+
