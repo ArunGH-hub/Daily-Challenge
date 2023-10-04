@@ -954,4 +954,9 @@ def nickname_generator(name):
                 return name[:4]
             
         
+#Calculate the sum of each value in the array to the nth power. Then subtract the sum of the original array.
 
+def modified_sum(a, n):
+    import math
+    new = [math.pow(int(i),n) for i in a]
+    return int(sum(new) - sum(a))
