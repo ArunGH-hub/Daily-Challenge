@@ -197,4 +197,28 @@ def camel_case(s):
     for i in s :
         res.append(i.capitalize())
     return "".join(res)    
+
+
+#If the left side is more heavy, return "Left"; if the right side is more heavy, return "Right"; if they are balanced, return "Balance"
+
+def balance(left, right):
+    left_count = 0
+    right_count = 0
+    for i in left :
+        left_count = left.count("!") * 2
+        left_count += left.count("?") * 3
         
+    for i in right :
+        right_count = right.count("!") * 2
+        right_count += right.count("?") * 3 
+    
+    if left_count > right_count :
+        return "Left"
+    elif right_count > left_count :
+        return "Right"
+    else :
+        return "Balance"
+    
+    
+    
+    
