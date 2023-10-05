@@ -220,5 +220,20 @@ def balance(left, right):
         return "Balance"
     
     
+#Create a moreZeros function which will receive a string for input, and return an array (or null terminated string in C) containing only the characters from that string whose binary representation of its ASCII value consists of more zeros than ones.
+
+def more_zeros(s):
+    new =  [str(bin(ord(i))) for i in s]
+    res = []
+    for word in new :
+        for i in word :
+            if word.count("0") > word.count("1") : #need to iterate on each character
+                res.append(word)
+    final_res = sorted(set(res),key=new.index)
     
-    
+    answer = []
+    for x in list(map(str,s)) :
+        if bin(ord(x)) in final_res :
+            answer.append(x)
+    return sorted(set(answer),key=s.index)        
+            
