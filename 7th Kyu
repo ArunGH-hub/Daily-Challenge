@@ -984,3 +984,16 @@ def consecutive(arr):
             if i not in arr :
                 count += 1
         return count       
+
+
+#In this kata you will be given a random string of letters and tasked with returning them as a string of comma-separated sequences sorted alphabetically, with each sequence starting with an uppercase character followed by n-1 lowercase characters, where n is the letter's alphabet position 1-26.
+
+def alpha_seq(string):
+    string = string.lower()
+    new =  sorted([str(i)*(ord(i)-96) for i in string])
+    res = []
+    for i in new :
+        res.append(i.capitalize())
+    return ",".join(res)    
+    
+
