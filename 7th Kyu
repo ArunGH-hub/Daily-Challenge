@@ -967,3 +967,20 @@ def modified_sum(a, n):
 def sum_of_minimums(arr) :
     return sum(list(map(min,arr)))
 
+#Write a function that takes an array of unique integers and returns the minimum number of integers needed to make the values of the array consecutive from the lowest number to the highest number.
+
+def consecutive(arr):
+    if arr == [] :
+        return 0
+    elif len(arr) == 1 :
+        return 0
+    else :
+        
+        arr = sorted(arr)
+        count = 0
+        total_arr = list(range(arr[0],arr[-1]+1))
+    
+        for i in total_arr :
+            if i not in arr :
+                count += 1
+        return count       
