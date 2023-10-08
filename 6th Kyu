@@ -259,3 +259,17 @@ def reverse_alternate(s):
             res.append(c[::-1])
     return " ".join(res).strip()        
     
+
+
+#Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
+
+def find_missing_letter(chars): 
+    final_list = [ord(i) for i in chars]
+    new = list(range(min(final_list),max(final_list)+1))  #total range
+    res = []
+    for i in new :
+        if i not in final_list :
+            res.append(i)
+    return chr(res[0])
+
+
