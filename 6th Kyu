@@ -247,3 +247,15 @@ def find_it(seq):
 
 
 
+#Reverse every other word in a given string, then return the string. Throw away any leading or trailing whitespace, while ensuring there is exactly one space between each word
+
+def reverse_alternate(s):
+    s = s.split()
+    res = []
+    for i,c in enumerate(s) :
+        if i % 2 == 0 :
+            res.append(c)
+        else :
+            res.append(c[::-1])
+    return " ".join(res).strip()        
+    
