@@ -237,3 +237,13 @@ def more_zeros(s):
             answer.append(x)
     return sorted(set(answer),key=s.index)        
             
+
+
+#Given an array of integers, find the one that appears an odd number of times.
+
+def find_it(seq):
+    check =  [seq.count(i) for i in seq if seq.count(i) % 2 != 0][0]
+    return [int(i) for i in seq if  seq.count(i) == check][0]
+
+
+
