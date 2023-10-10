@@ -1021,3 +1021,11 @@ def covfefe(s):
         return s.replace("coverage","covfefe") 
     else :
         return f"{s} {'covfefe'}"
+
+
+
+#capitalise the whole string (Jaden case strings)
+
+def to_jaden_case(s):
+    s = s.split()
+    return " ".join([str(i).capitalize() for i in s])
