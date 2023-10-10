@@ -1029,3 +1029,19 @@ def covfefe(s):
 def to_jaden_case(s):
     s = s.split()
     return " ".join([str(i).capitalize() for i in s])
+
+
+
+#Complete the function to create backronyms. Transform the given string (without spaces) to a backronym, using the preloaded dictionary and return a string of words, separated with a single space (but no trailing spaces).
+
+#preloaded variable: "dictionary"
+
+def make_backronym(acronym):
+    new = [str(i).upper() for i in acronym] 
+    res = []
+    for i in new :
+        res.append(dictionary[i])
+    
+    return " ".join(res)
+    
+
