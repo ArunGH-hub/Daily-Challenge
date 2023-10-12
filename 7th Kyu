@@ -1041,7 +1041,15 @@ def make_backronym(acronym):
     res = []
     for i in new :
         res.append(dictionary[i])
-    
+
+
+#Write a function that reverses the bits in an integer.For example, the number 417 is 110100001 in binary. Reversing the binary is 100001011 which is 267.
+
+def reverse_bits(n):
+    new = int(bin(n)[2:])
+    return int(str(new)[::-1],2) #int function takes base 2 as an argument to convert from binary
+
+
     return " ".join(res)
     
 
