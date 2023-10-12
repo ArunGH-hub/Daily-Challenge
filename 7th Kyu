@@ -1052,4 +1052,14 @@ def reverse_bits(n):
 
     return " ".join(res)
     
+#Given an integer n and two other values, build an array of size n filled with these two values alternating.
 
+def alternate(n, first_value, second_value):
+    res = []
+    if n == 0 :
+        return []
+    else :
+        while len(res) < n :
+            res.append(first_value)
+            res.append(second_value)
+        return res[:n]
