@@ -1063,3 +1063,12 @@ def alternate(n, first_value, second_value):
             res.append(first_value)
             res.append(second_value)
         return res[:n]
+
+
+#Given a sequence of integers, return the sum of all the integers that have an even index (odd index in COBOL), multiplied by the integer at the last index.
+
+def even_last(numbers): 
+    if not numbers :
+        return 0
+    else :
+        return sum([int(c) for i,c in enumerate(numbers) if i % 2 == 0]) * numbers[-1]
