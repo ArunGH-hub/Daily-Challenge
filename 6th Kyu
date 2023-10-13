@@ -287,3 +287,34 @@ def duplicate_encode(word):
     return "".join(res)        
 
 
+
+#ou are given a string of numbers between 0-9. Find the average of these numbers and return it as a floored whole number (ie: no decimal places) written out as a string. Eg:"zero nine five two" -> "four"If the string is empty or includes a number greater than 9, return "n/a"
+
+import re
+def average_string(s):
+    dict = {"zero":0,"one":1,"two":2,"three":3,"four":4,"five":5,"six":6,"seven":7,"eight":8,"nine":9}
+    s = s.split()
+    for i in s :
+        if i not in dict.keys() :
+            return "n/a"
+    
+    new = [dict[i] for i in s]
+    
+    if not new :         #need to check if new is empty here before calculating the average to avoid zero divison error
+        return "n/a"
+    
+    
+    import math
+    average = math.floor((sum(new) / len(new)))
+    res = []
+    
+    
+    if not s :
+        return "n/a"
+
+     
+    else :
+        for key,value in dict.items() : #iterate over dictionary
+            if value == average :
+                res.append(key)
+        return "".join(res)        
