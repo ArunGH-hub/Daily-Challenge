@@ -1072,3 +1072,22 @@ def even_last(numbers):
         return 0
     else :
         return sum([int(c) for i,c in enumerate(numbers) if i % 2 == 0]) * numbers[-1]
+
+
+
+#Given a string, return true if the first instance of "x" in the string is immediately followed by the string "xx".
+def triple_x(s):
+    if not s :
+        return False
+    elif len(s) < 3 :
+        return False
+    else :
+        if "x" in s :
+            # grab first index of x in string
+            first = s.index("x")
+            second = first + 1
+            third = first + 2
+            return s[first] == s[second] == s[third]
+        else :
+            return False
+
