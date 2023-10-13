@@ -318,3 +318,16 @@ def average_string(s):
             if value == average :
                 res.append(key)
         return "".join(res)        
+
+
+#Given an integer n, find the maximal number you can obtain by deleting exactly one digit of the given number.
+
+def delete_digit(n):
+    n = str(n)
+    res = []
+    for i in range(len(n)) :
+        new = n[:i] + n[i+1:] #includes everything up to the ith character + everything after the ith character therefore removing each character from the original string
+        res.append(new)
+    return max(list(map(int,res)))    
+        
+
