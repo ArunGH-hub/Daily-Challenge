@@ -1091,3 +1091,11 @@ def triple_x(s):
         else :
             return False
 
+
+#Write a function that takes a string and outputs a strings of 1's and 0's where vowels become 1's and non-vowels become 0's.
+
+def vowel_one(s):
+    s = s.lower()
+    vowels = "aieuo"
+    s = list(map(str,s))         
+    return "".join(["1" if i in vowels else "0" for i in s ])        
