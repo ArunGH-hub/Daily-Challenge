@@ -1119,4 +1119,28 @@ def db_sort(arr):
     return numbers_s
 
     
+    def solve(st):
+    st = sorted(st)
+    new = [ord(i) for i in st]
+    res = []
     
+    if len(set(st)) != len(st) :
+        return False
+    elif len(st) == 1 :
+        return True
+    elif len(st) == 2 :
+            if abs(new[0] - new[1]) != 1 :
+                return False
+            else :
+                return True
+        
+    
+    
+    
+    for i in range(len(new)) :
+        if abs(new[i-1]-new[i]) == 1 :
+            res.append(chr(new[i]))
+    
+    final_res = st[0] + "".join(res)
+    
+    return final_res == "".join(sorted(st))
