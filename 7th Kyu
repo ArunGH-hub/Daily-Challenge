@@ -1099,3 +1099,24 @@ def vowel_one(s):
     vowels = "aieuo"
     s = list(map(str,s))         
     return "".join(["1" if i in vowels else "0" for i in s ])        
+
+
+#Your job is to return a single array that has first the numbers sorted in ascending order, followed by the strings sorted in alphabetic order. The values must maintain their original type.
+
+def db_sort(arr): 
+    numbers = []
+    strng = []
+    for i in arr :
+        if type(i) == int :
+            numbers.append(i)
+        else :
+            strng.append(i)
+    
+    numbers_s = sorted(numbers)
+    strng_s = sorted(strng)
+    numbers_s.extend(strng_s)
+    
+    return numbers_s
+
+    
+    
