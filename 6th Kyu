@@ -350,7 +350,23 @@ def compute_sum(n):
     return final
     
             
-       
+   #Complete the solution so that the function will break up camel casing, using a space between words.
+
+def solution(s):
+    new = [str(i) for i in s]
+    res = []
+    for i in range(len(new)-1) :
+        if new[i].islower() and new[i+1].isupper() :
+            word = new[i] + " "
+            res.append(word)
+        else :
+            res.append(new[i])
+            
+    res.extend(new[-1])
+    
+            
+    return "".join(res)     
+                
         
 
 
