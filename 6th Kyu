@@ -368,5 +368,19 @@ def solution(s):
     return "".join(res)     
                 
         
+def bingo(ticket,win):
+    character_code = [list(i[0]) for i in ticket] #convert to a list of character codes
+    num = [chr(i[1]) for i in ticket] #numbers list converted to int
+    check = list(zip(character_code,num))
+    
+    res = [i[1] for i in check if i[1] in i[0]] #list comprehension result if there is a match
+    
+    if len(res) >= win :
+        return "Winner!"
+    else :
+        return "Loser!"
+    
+    
+   
 
 
