@@ -1144,3 +1144,24 @@ def db_sort(arr):
     final_res = st[0] + "".join(res)
     
     return final_res == "".join(sorted(st))
+
+
+
+#Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+
+def DNA_strand(dna):
+    dna = list(dna)
+    res = []
+    for i in dna :
+        if i == "A" :
+            res.append("T")
+        elif i == "T" :
+            res.append("A")
+        elif i == "C" :
+            res.append("G")
+        elif i == "G" :
+            res.append("C")
+            
+            
+    return "".join(res)        
+        
