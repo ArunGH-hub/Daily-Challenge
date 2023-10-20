@@ -1165,3 +1165,24 @@ def DNA_strand(dna):
             
     return "".join(res)        
         
+
+
+#Strong number is the number that the sum of the factorial of its digits is equal to number itself.
+
+def factorial(n) :
+    import math
+    res = range(1,n+1)
+    return math.prod(res) #create function
+        
+    
+
+
+import math
+def strong_num(number):
+    new = [int(i) for i in str(number)] #create iterable
+    applied = list(map(factorial,new)) #map the function to the created iterable
+    
+    if sum(applied) == number :
+        return "STRONG!!!!"
+    else :
+        return "Not Strong !!"
