@@ -1186,3 +1186,17 @@ def strong_num(number):
         return "STRONG!!!!"
     else :
         return "Not Strong !!"
+
+
+#A spoonerism is a spoken phrase in which the first letters of two of the words are swapped around, often with amusing results.
+
+def spoonerize(words):
+    words = words.split()
+    res = []
+    
+    second_word = words[1]
+    first_word = words[0]
+    
+    return f"{second_word[0]}{first_word[1:]} {first_word[0]}{second_word[1:]}"
+        
+    
