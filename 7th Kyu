@@ -1172,7 +1172,7 @@ def DNA_strand(dna):
 def factorial(n) :
     import math
     res = range(1,n+1)
-    return math.prod(res) #create function
+    returnd math.prod(res) #create function
         
     
 
@@ -1198,5 +1198,37 @@ def spoonerize(words):
     first_word = words[0]
     
     return f"{second_word[0]}{first_word[1:]} {first_word[0]}{second_word[1:]}"
+
+
+#vampire numbers: Create a function that can receive two 'fangs' and determine if the product of the two is a valid vampire number.
+
+def vampire_test(x, y):
+    
+    if x < 0 and y < 0 :
+        return False
+    else :
+        x = abs(x)
+        y = abs(y)
+    
+        new_x = [int(i) for i in str(x)]
+        new_y = [int(i) for i in str(y)]
+
+        prod = x * y 
+        new_prod = [int(i) for i in str(prod)]
+
+        res = []
+        for i in new_x :
+            if i in new_prod :
+                res.append(i)
+
+        for i in new_y :
+            if i in new_prod :
+                res.append(i)
+
+
+
+        return len(res) == len(new_prod)
+
+
         
     
