@@ -1230,5 +1230,20 @@ def vampire_test(x, y):
         return len(res) == len(new_prod)
 
 
-        
+        #Password maker One suggestion to build a satisfactory password is to start with a memorable phrase or sentence and make a password by extracting the first letter of each word.
+
+def make_password(phrase):
+    new = [i[0] for i in phrase.split()]
+    res = []
+    for i in new :
+        if i == "I" or i == "i" :
+            res.append("1")
+        elif i == "o" or i == "O" :
+            res.append("0")
+        elif i == "s" or i == "S" :
+            res.append("5")
+        else :
+            res.append(i)
+    return "".join(res)        
+            
     
