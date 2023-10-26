@@ -1247,3 +1247,16 @@ def make_password(phrase):
     return "".join(res)        
             
     
+#ou know that a piece of paper has a thickness of 0.0001m. Given distance in units of meters, calculate how many times you have to fold the paper to make the paper reach this distance.
+
+def fold_to(distance):
+    if distance < 0 :
+        return None
+    
+    else :
+        count = 0
+        thickness = 0.0001
+        while thickness < distance :
+            thickness *= 2
+            count += 1
+        return count    
