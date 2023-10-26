@@ -1278,3 +1278,21 @@ def is_nice(arr):
         return len(res) == len(arr)        
 
 
+#In this Kata, we are going to reverse a string while maintaining the spaces (if any) in their original place
+
+def solve(s) :
+    split_s = s.split(" ")
+    new = "".join(split_s)[::-1] #string reversed normally
+    new = list(new)
+    res = []
+    
+    for i,c in enumerate(list(s)) :
+        if c == " " :
+            res.append(i) #list of indexes of the spaces
+    
+    for i in res :
+        new.insert(i," ")
+    
+    return "".join(new)
+        
+    
