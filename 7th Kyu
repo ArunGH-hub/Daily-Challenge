@@ -1260,3 +1260,21 @@ def fold_to(distance):
             thickness *= 2
             count += 1
         return count    
+
+
+#A Nice array is defined to be an array where for every value n in the array, there is also an element n - 1 or n + 1 in the array.
+
+def is_nice(arr):
+    if not arr :
+        return False
+    
+    else :
+        nplusone = [(i+1) for i in arr] #n+1 array
+        nminusone = [(i-1) for i in arr] #n-1 array
+        res = []
+        for i in arr :
+            if i in nplusone or i in nminusone :
+                res.append(i)
+        return len(res) == len(arr)        
+
+
