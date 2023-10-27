@@ -1295,4 +1295,26 @@ def solve(s) :
     
     return "".join(new)
         
+
+#A number is called Automorphic number if and only if its square ends in the same digits as the number itself.
+
+def automorphic(n):
+    sq_n = n * n 
+    new = [int(i) for i in str(n)] #n in list form
+    sq_n_new = [int(i) for i in str(sq_n)] #sq_n in list_form
     
+    verification = sq_n_new[-len(new):] #the subset at the end of the square numbers that equals to the lenth of n
+    res = []
+    for i in new :
+        if i in verification :
+            res.append(i)
+    
+    if sorted(res) == sorted(verification) :
+        return "Automorphic"
+    else :
+        return "Not!!"
+    
+    
+    
+    
+
