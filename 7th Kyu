@@ -1315,6 +1315,24 @@ def automorphic(n):
         return "Not!!"
     
     
+    import math
+def growing_plant(up_speed, down_speed, desired_height):
+    current_height = 0
+    days_count = 0
+    
+    if desired_height == 0 :
+        return 1
+    
+    else :
+    
+        while current_height < desired_height : 
+            current_height += up_speed
+            days_count += 0.5
+            if current_height < desired_height : #checking if the desired height has already been hit
+                current_height -= down_speed
+                days_count += 0.5
+
+        return math.ceil(days_count)    
     
     
 
