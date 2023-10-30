@@ -1335,4 +1335,24 @@ def growing_plant(up_speed, down_speed, desired_height):
         return math.ceil(days_count)    
     
     
+#Some people just have a first name; some people have first and last names and some people have first, middle and last names.You task is to initialize the middle names (if there is any).
+
+def initialize_names(name):
+    new = name.split()
+    middle = new[1:-1] #list of middle names if any
+    res = ""
+    
+    if len(new) < 3 :
+        return name
+    
+    for word in middle :
+        res += word[0] +". "
+    
+    return f"{new[0]} {res}{new[-1]}"
+        
+        
+                
+            
+        
+
 
