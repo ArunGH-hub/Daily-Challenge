@@ -1362,3 +1362,22 @@ def filter_long_words(sentence, n):
     return [i for i in sentence.split() if len(i) > n]       
 
 
+#Your task is to write a function maskify, which changes all but the last four characters into '#'.
+
+# return masked string
+def maskify(cc):
+    new = [str(i) for i in str(cc)]
+    if not cc :
+        return ""
+    
+    elif len(new) < 4 :
+        return cc
+    
+    else :
+        res = []
+        for i in cc[:-4] :
+            res.append("#")
+        return "".join(res) + cc[-4:]    
+    
+    
+
