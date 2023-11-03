@@ -448,7 +448,18 @@ def spin_words(sentence):
         return " ".join(res)        
                 
 
+#In this kata you are required to, given a string, replace every letter with its position in the alphabet.
 
+def alphabet_position(text):
+    new = list(text)
+    res = []
+    for i in new :
+        if i.isalpha() :
+            res.append(str(ord(i.lower())-96))
+            
+    return " ".join(res)     
+            
+    
 
 
 
