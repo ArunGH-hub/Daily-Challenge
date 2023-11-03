@@ -460,7 +460,18 @@ def alphabet_position(text):
     return " ".join(res)     
             
     
+#Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 
+def is_pangram(s):
+    new = list(s)
+    res = []
+    for i in new :
+        if i.isalpha() and i not in " " :
+            res.append(i.lower())
+            
+    return len(set(res)) == 26  
+        
+            
 
 
 
