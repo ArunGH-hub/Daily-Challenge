@@ -472,6 +472,25 @@ def is_pangram(s):
     return len(set(res)) == 26  
         
             
+#The depth of an integer n is defined to be how many multiples of n it is necessary to compute before all 10 digits have appeared at least once in some multiple.
+
+def compute_depth(n):
+    count = 0 #number of multiples needed
+    digits = list(range(10))
+    digits_found = []
+    
+    
+    while len(set(digits_found)) < len(digits) : #initialise while loop
+        count += 1 #count increases by 1 each time
+        ans = n * count
+        for i in list(map(int,str(ans))) :
+            digits_found.append(i)
+    return count            
+                    
+                
+        
+    
+
 
 
 
