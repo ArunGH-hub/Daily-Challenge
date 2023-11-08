@@ -1395,3 +1395,23 @@ def multiples(m, n):
         res.append(i * n)
         
     return res  
+
+
+#A number is a Special Number if it’s digits only consist 0, 1, 2, 3, 4 or 5
+
+def special_number(n):
+    special = list(range(0,6))
+    res = []
+    new = [int(i) for i in str(n)] #breaking down into digits
+    for i in new :
+        if i in special :
+            res.append(i)
+    
+    if len(res) == len(new) :
+        return "Special!!"
+    else :
+        return "NOT!!"
+    
+    
+    
+    
