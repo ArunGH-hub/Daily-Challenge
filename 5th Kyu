@@ -10,3 +10,27 @@ def move_zeros(lst):
     lst.extend(res) #adds zeros to end
     return lst
             
+#Here's the deal:
+
+#It must start with a hashtag (#).
+#All words must have their first letter capitalized.
+#If the final result is longer than 140 chars it must return false.
+#If the input or the result is an empty string it must return false.
+
+def generate_hashtag(s):
+    res = ""
+    for i in s.split() :
+        res += i.capitalize()
+        
+    new = f"#{res}"
+    
+    if len(new) > 140 :
+        return False
+    
+    elif not s :
+        return False
+    
+    else :
+        return new
+    
+    
