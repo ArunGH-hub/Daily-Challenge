@@ -1,0 +1,12 @@
+#Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
+
+def move_zeros(lst):
+    res = []
+    for i in lst :
+        if i == 0 :
+            res.append(i) #add zeros to a new list
+            lst.remove(0) #remove the 0s from the original list
+    
+    lst.extend(res) #adds zeros to end
+    return lst
+            
