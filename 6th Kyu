@@ -526,6 +526,37 @@ def to_camel_case(text):
     
             
 
+#Given a positive integer n written as abcd... (a, b, c, d... being digits) and a positive integer p
 
+#we want to find a positive integer k, if it exists, such that the sum of the digits of n taken to the successive powers of p is equal to k * n.
+
+def dig_pow(n, p):
+    powers = list(range(p,p+len(str(n))))
+    new = [int(i) for i in str(n)]
+    res = []
+    
+    check = list(zip(new,powers))
+    res = []
+    for i in check :
+        import math
+        res.append(math.pow(i[0],i[1]))
+        
+    ans = int(sum(res)) #res is now the correct sum of the powers
+    
+    if ans % n == 0 :
+        return int(ans / n)
+    
+    else :
+        return -1
+    
+            
+
+        
+
+
+   
+
+        
+        
 
 
