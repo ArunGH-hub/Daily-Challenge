@@ -550,6 +550,16 @@ def dig_pow(n, p):
         return -1
     
             
+#your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+
+def order(sentence):
+    if not sentence :
+        return ""
+    
+    else :
+        sentence = sentence.split()
+        return " ".join(sorted(sentence,key = lambda x : sorted(x)))
+        
 
         
 
