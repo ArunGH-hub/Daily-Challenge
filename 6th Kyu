@@ -584,7 +584,40 @@ def title_case(title, minor_words=''):
     return " ".join(res)
             
     
+#Create a function that takes a string as a parameter and does the following, in this order:
+#Replaces every letter with the letter following it in the alphabet (see note below). Makes any vowels capital. Makes any consonants lower case
 
+def changer(s):
+    check = list(range(ord("a"),ord("z")+1)) #lowercase check
+    upper_check = list(range(65,91))
+    res = []
+    for i in list(s) :
+        if i.isalpha() :
+            if ord(i) == check[-1] :
+                res.append(chr(check[0]))
+            elif ord(i) == upper_check[-1] :
+                res.append(chr(upper_check[0]))
+            else :
+                new_letter = chr(ord(i)+1) #new character
+                res.append(new_letter)
+                
+        else :
+            res.append(i) #appends everything which isn't a letter
+                
+    vowels = "aieuoAEIOU"
+    ans = []
+    for i in res :
+        if i.isalpha() :
+            if i in vowels :
+                ans.append(i.upper())
+            else :
+                ans.append(i.lower())
+                
+        else :
+            ans.append(i)
+                
+    return "".join(ans)            
+            
      
 
 
