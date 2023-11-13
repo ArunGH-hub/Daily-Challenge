@@ -561,7 +561,31 @@ def order(sentence):
         return " ".join(sorted(sentence,key = lambda x : sorted(x)))
         
 
-        
+#A string is considered to be in title case if each word in the string is either (a) capitalised (that is, only the first letter of the word is in upper case) or (b) considered to be an exception and put entirely into lower case unless it is the first word, which is always capitalised.  
+
+def title_case(title, minor_words=''):
+    new = title.capitalize() #capitalizes the first word
+    words = minor_words.split() #words that must be lower case#
+    words_lower = [i.lower() for i in words]
+    
+    
+    
+    check = new.split() #eveything from the first word
+    res = []
+    for i in check :
+        if i in new.split()[0] :
+            res.append(i)
+        else :    
+            if i.lower() not in words_lower :
+                res.append(i.capitalize())
+            else :
+                res.append(i.lower())
+            
+    return " ".join(res)
+            
+    
+
+     
 
 
    
