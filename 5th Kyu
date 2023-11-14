@@ -74,3 +74,23 @@ def zeros(n):
 
         return len(digits[::-1][:check]) #final answer     
 
+
+#ROT13 decipher. For this task you're only supposed to substitute characters. Not spaces, punctuation, numbers, etc.
+
+def rot13(message):
+    table = str.maketrans("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz","NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm") #maps the table, used in conjuction with translate
+    res = []
+    for i in list(message) :
+        if i.isalpha() :
+            res.append(i.translate(table))     
+        else :
+            res.append(i)
+            
+    return "".join(res)        
+            
+            
+            
+    
+    
+
+
