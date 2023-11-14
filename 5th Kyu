@@ -48,3 +48,29 @@ def pig_it(text):
         
     return " ".join(res)    
         
+
+
+
+def zeros(n):
+    import math
+    if n == 0 :
+        return 0
+    
+    else :
+    
+        new = math.factorial(n)
+        digits = list(map(int,str(new))) #split factorial into digits
+        res = []
+        for i in digits[::-1] : #reverse the digits for the iteration 
+            if i != 0 :
+                res.append(i)
+                break #cuts the if statement as soon as a non-zero is found
+                
+              
+
+        #work out index of the first 6
+        check = digits[::-1].index(res[0]) #6 is at index 2 so need to return everything up to index 2
+        
+
+        return len(digits[::-1][:check]) #final answer     
+
