@@ -89,7 +89,17 @@ def rot13(message):
     return "".join(res)        
             
             
-            
+  #Complete the function that accepts two integer arrays of equal length compares the value each member in one array to the corresponding member in the othersquares the absolute value difference between those two valuesand returns the average of those squared absolute value difference between each member pair.
+
+def solution(array_a, array_b):
+    new = zip(array_a,array_b)
+    res = []
+    check = [abs(i[0]-i[1])**2 for i in new] #squares the absolute difference using list comprehension
+    
+    return sum(check)/len(array_a)
+
+        
+          
     
     
 
