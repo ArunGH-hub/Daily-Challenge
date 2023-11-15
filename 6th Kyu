@@ -620,6 +620,26 @@ def changer(s):
             
      
 
+#you have to write a function that receives a list, list size will always be at least 3 numbers. The missing term will never be the first or last one.
+
+def find_missing(sequence):
+    res = []
+    for i in range(len(sequence)-2) :
+        difference = abs(sequence[i+1]-sequence[i+2]) #skips the first index
+        res.append(difference)
+        
+    # res[0] is the difference
+    
+   
+    check = list(range(sequence[0],sequence[-1]+1,res[0])) #(start,stop,step) this gives the full list
+    
+    
+    ans = 0
+    for i in check :
+        if i not in sequence :
+            ans += i
+            
+    return ans
 
    
 
