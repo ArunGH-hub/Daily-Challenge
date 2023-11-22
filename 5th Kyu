@@ -98,7 +98,23 @@ def solution(array_a, array_b):
     
     return sum(check)/len(array_a)
 
-        
+#Complete the function/method so that it takes a PascalCase string and returns the string in snake_case notation. Lowercase characters can be numbers. If the method gets a number as input, it should return a string.
+
+def to_underscore(string):
+    if str(string).isdigit() : #checking if it is a number
+        return str(string)
+    
+    else :
+        res = ""
+        for i in range(len(string)-1) :
+            if string[i].isupper() :
+                res += f"_{string[i]}"
+            else :
+                res += string[i]
+        res += string[-1]      
+        return res[1:].lower()       
+            
+                
           
     
     
