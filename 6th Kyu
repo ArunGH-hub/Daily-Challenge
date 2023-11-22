@@ -692,6 +692,34 @@ def mineLocation(field):
     return [res,check]
         
     
-                     
+    #Round any given number to the closest 0.5 step
+
+def solution(n) :
+    check = str(n)
+    result = check.split(".")
+    
+    new = "0"+"."+result[-1] #isolates the part after the decimal
+    
+    if float(new) < 0.25 :
+        import math
+        return math.floor(n)
+    
+    elif float(new) >= 0.25 and float(new) <= 0.5 :
+        return float(f"{result[0]}.5")
+    
+    elif float(new) > 0.5 and float(new) < 0.75 :
+        return float(f"{result[0]}.5")
+    
+    else :
+        import math
+        return math.ceil(n)
+    
+    
+
+
+
+
+
+                 
 
 
