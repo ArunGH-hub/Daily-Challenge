@@ -674,6 +674,24 @@ def high(x):
         return final[-1][0]
     
         
-                    
+   ##Write a function mineLocation/MineLocation that accepts a 2D array, and returns the location of the mine. The mine is represented as the integer 1 in the 2D array. Areas in the 2D array that are not the mine will be represented as 0s.
+
+
+def mineLocation(field):
+    res = []
+    
+    for i in field :
+        for num in i :
+            if "1" in str(num) : 
+                res.append(field.index(i)) #res stores the row index of the mine
+        
+    res = int(res[0])
+    
+    check = field[res].index(1) #stores column index of the mine which is 1
+    
+    return [res,check]
+        
+    
+                     
 
 
