@@ -115,7 +115,35 @@ def to_underscore(string):
         return res[1:].lower()       
             
                 
-          
+    #In some countries of former Soviet Union there was a belief about lucky tickets. A transport ticket of any sort was believed to posess luck if sum of digits on the left half of its number was equal to the sum of digits on the right half. Here are examples of such numbers:
+
+def luck_check(string) :
+    if not string :
+        return False 
+        
+    elif not string.isdigit() :
+        return False
+    
+    else :
+    
+        string = list(map(int,string))
+        if len(string) % 2== 0 : #even length
+            divide = int(len(string)/2)
+            left = string[:divide]
+            right = string[divide:]
+            return sum(left) == sum(right)
+
+        else : # if length of string is odd
+            import math
+            odd_div = math.ceil((len(string)/2)) #this represents the middle number which is has index number minus 1
+            odd_div_idx = odd_div-1
+            left = string[:odd_div_idx]
+            right = string[odd_div_idx:]
+            return sum(left) == sum(right)
+        
+        
+
+      
     
     
 
