@@ -1431,4 +1431,30 @@ def evens_and_odds(n):
     else :
         return hex(n)[2:]
     
+   #ou have to search all numbers from inclusive 1 to inclusive a given number x, that have the given digit d in it.
+#The value of d will always be 0 - 9.
+#The value of x will always be greater than 0.
+
+def numbers_with_digit_inside(x, d):
+    check = list(range(1,x+1))
+    new = list(map(str,check)) #convert it to str
+    res = []
+    for i in new :   
+        if str(d) in i :
+            res.append(int(i))
+            
+    cnt = len(res) #count
+    sm = sum(res) #sum
+    import math
+    prd = math.prod(res) #product
     
+    if not res :
+        return [0,0,0]
+    
+    else :
+        return [cnt,sm,prd]
+    
+            
+        
+
+     
