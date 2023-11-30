@@ -735,7 +735,19 @@ def duplicate_count(text):
     
     return len(set(duplicates))
     
-
+def is_prime(num):
+    if num < 2 :
+        return False
+    else :
+        res = []
+        for i in range(2,num+1) :
+            if num % i == 0 : 
+                res.append(i)
+                
+        return len(res) == 1   #length can't be greater than 1    
+                
+            
+            
                  
 
 
