@@ -1455,6 +1455,14 @@ def numbers_with_digit_inside(x, d):
         return [cnt,sm,prd]
     
             
-        
+ #Write a function that can return the smallest value of an array or the index of that value. The function's 2nd parameter will tell whether it should return the value or the index.
+
+def find_smallest(numbers, to_return):
+    if to_return == "value" :
+        return min(numbers)
+    
+    else :
+        return numbers.index(min(numbers))
+               
 
      
