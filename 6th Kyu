@@ -747,7 +747,31 @@ def is_prime(num):
         return len(res) == 1   #length can't be greater than 1    
                 
             
+#Write a function that accepts an array of radii (can be integers and/or floats), and returns a total score using the above specification.
+
+def score_throws(radii):
+    if not radii :
+        return 0 
+    
+    else :
+        count = 0
+        for i in radii :
+            if i > 10 :
+                count += 0 
+                
+            elif i >= 5 and i <= 10 :
+                count += 5
+                
+            elif i < 5 :
+                count += 10
+                
+        if count == len(radii) * 10 : 
+            return count + 100
             
+        else :
+            return count
+            
+                        
                  
 
 
