@@ -772,6 +772,42 @@ def score_throws(radii):
             return count
             
                         
-                 
+    #There are no given candidates. An elector can vote for anyone. Each ballot contains only one name and represents one vote for this name. A name is an arbitrary string, e.g. "A", "B", or "XJDHD". There are no spoiled ballots.
+
+def get_winner(ballots):
+    check = [ballots.count(i) for i in set(ballots)] #count of each ballot
+    new = set(ballots)
+    
+    
+    final = sorted(list(zip(new,check)),key = lambda x : x[1]) #sort the zipped result by count
+    
+    if len(ballots) == 1 :
+        return ballots[0]
+    
+    elif len(set(ballots)) == 1 :
+        return ballots[0]
+    
+    else :
+    
+        res = []
+        min_no = len(ballots) / 2
+        for i in final[-2:] :
+            res.append(i[1])
+
+        if len(set(res)) == 1 : #meaning the same number
+            return None
+        
+        
+        else :
+            if final[-1][1] <= min_no :
+                return None
+            
+            else :
+                return final[-1][0]
+        
+     
+    
+
+             
 
 
