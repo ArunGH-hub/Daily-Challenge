@@ -806,7 +806,32 @@ def get_winner(ballots):
                 return final[-1][0]
         
      
+   #Write a function that receives two strings and returns n, where n is equal to the number of characters we should shift the first string forward to match the second. The check should be case sensitive.
+
+def shift_right(s) :
+    return s[-1] + s[:-1] #functin to shift a string by one to the right
+
+
+def shifted_diff(first, second):
+    res = []
+    for i in range(len(first)) :
+        res.append(shift_right(first))
+        first = shift_right(first) #need to update the first string
+        
     
+    ans = []
+    for i,c  in enumerate(res,start = 1) :
+        if c == second :
+            ans.append(i)
+            
+    return ans[0]        
+        
+        
+
+    
+    
+    
+     
 
              
 
