@@ -1476,3 +1476,13 @@ def find_next_square(x):
         return -1
 
    
+#Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+
+def reverse_words(text):
+    new = text.split()
+    if "  " in text :
+        return "  ".join([i[::-1] for i in new])
+    
+    else :
+        return " ".join([i[::-1] for i in new])
