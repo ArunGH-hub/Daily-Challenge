@@ -1486,3 +1486,20 @@ def reverse_words(text):
     
     else :
         return " ".join([i[::-1] for i in new])
+
+
+#["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+
+#Write a function which takes a list of strings and returns each line prepended by the correct number.
+
+
+
+def number(input) :
+    check = list(map(str,range(1,len(input)+1))) #create range of strings
+    
+    
+    res = []
+    for i,c in enumerate(input,start=1) :
+            res.append(f"{i}: {c}")
+            
+    return res        
