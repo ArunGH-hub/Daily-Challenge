@@ -826,7 +826,43 @@ def shifted_diff(first, second):
             
     return ans[0]        
         
+   def is_valid_IP(strng):
+    if not strng :
+        return False
+    
+    else :
+    
+        new = list(map(str,strng.split("."))) #split strng based on decimal and converted to string
         
+        new_strngonly = [i for i in new if i.isdigit()]
+        
+        new_zerodigits = [i for i in new if i.startswith("0") and len(i) > 1] #startswith checks for leading zeros and makes sure it doesn't include zero
+        
+        
+        
+        if len(new_strngonly) != 4 : #checks if it is digits
+            return False
+        
+        elif len(new_zerodigits) > 0 :
+            return False
+        
+        else :
+
+            check = list(range(256)) #range for which values must fall between
+            final = [int(i) for i in strng.split(".")] #values converted to integers
+            res = []
+
+            verify_valid = [i for i in final if i < 256 and i >= 0] #checks if integer is between 0 and 255
+
+            if len(verify_valid) != 4 :
+                return False
+
+            else :
+                return True
+        
+    
+    
+                 
 
     
     
