@@ -875,7 +875,29 @@ def count(s):
         return new
         
                  
+#Create a function that returns the lowest product of 4 consecutive digits in a number given as a string.
 
+def lowest_product(input):
+    if len(input) < 4 :
+        return "Number is too small"
+    
+    else :
+        
+        res = []
+        for i in range(len(input)-3) : #this gives all the consecutive digits
+            res.append(input[i:i+4])
+
+
+        import math
+
+        ans = [math.prod(list(map(int,i))) for i in res] #maps the sum of the list of integers of each
+
+        check = sorted(ans)[0] #lowest product value
+
+        return check
+        
+        
+    
     
     
     
