@@ -898,7 +898,26 @@ def lowest_product(input):
         
         
     
+    #rule of divisibility by 13
+import math
+
+def calculate(n) :
+    n = str(n)
+    powers = [math.pow(10,int(i)) % 13 for i in range(len(n))] #initialize the powers
+    new = list(map(int,n))[::-1] #initialize the number in reverse order
+    return int(sum([math.prod(i) for i in list(zip(new,powers))]))
+
+
+def thirt(n):
+    res = []
+    while len(str(n)) > 2 :
+        n = calculate(n) #need to change the value of n
     
+    return n
+    
+        
+               
+               
     
     
      
