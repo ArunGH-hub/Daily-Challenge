@@ -1503,3 +1503,17 @@ def number(input) :
             res.append(f"{i}: {c}")
             
     return res        
+
+
+#Given an array representing a series of floors you must reach by elevator, return an integer representing the total distance travelled for visiting each floor in the array in order.
+
+def elevator_distance(array):
+    res = []
+    for i in range(len(array)-1) :
+        distance = abs(array[i]-array[i+1])
+        res.append(distance)
+        
+        
+        
+    return sum(res)    
+        
