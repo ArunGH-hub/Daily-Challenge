@@ -1539,4 +1539,23 @@ def check_exam(arr1,arr2):
     
     else :
         return count        
+
+
+def arithmetic_sequence_elements(a, d, n):
+    new = [i for i in range(a,n+1,2)] #initialize list
+    
+    if d == 0 :
+        arr = []
+        while len(arr) < n :
+            arr.append(a)
+            
+        return ", ".join(list(map(str,arr)))    
+    
+    else :
+        arr = [a]
+        while len(arr) < n : #while loop to show the progression
+            addition = arr[-1] + d #appemd the difference
+            arr.append(addition)
+        
+        return ", ".join(list(map(str,arr))) #converting an array to a list of strings with a comma
     
