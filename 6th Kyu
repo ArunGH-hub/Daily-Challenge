@@ -941,6 +941,14 @@ def diamond(n):
         return "\n".join(left_check) + "\n" + right_side
         
         
+    #Complete the method which returns the number which is most frequent in the given input array. If there is a tie for most frequent number, return the largest number among them.
+
+#Complete the method which returns the number which is most frequent in the given input array. If there is a tie for most frequent number, return the largest number among them.
+
+def highest_rank(arr):
+    new = sorted(arr,key = arr.count) #returns the sort by highest number
+    
+    return max([i for i in new if new.count(i) == new.count(new[-1])]) #checks if there is a tie
                
                
     
