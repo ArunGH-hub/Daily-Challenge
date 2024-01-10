@@ -951,7 +951,10 @@ def highest_rank(arr):
     return max([i for i in new if new.count(i) == new.count(new[-1])]) #checks if there is a tie
                
                
-    
+#Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number.
+
+def count_bits(n):
+    return sum([int(i) for i in list(bin(n)) if i == "1"])    
     
      
 
