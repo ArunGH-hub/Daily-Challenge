@@ -957,7 +957,25 @@ def count_bits(n):
     return sum([int(i) for i in list(bin(n)) if i == "1"])    
     
      
+#The function parts_sums (or its variants in other languages) will take as parameter a list ls and return a list of the sums of its parts as defined above.
 
+def parts_sums(arr):
+    
+    if not arr : 
+        return [0]
+    
+    else :
+        res = []
+        for i in range(len(arr)-1) :
+            res.append(arr[i:]) #creates a list of each list
+
+
+
+        new = list(map(sum,res)) #remember that we cannot sum an individual integer so we can just add on the final number to this list
+
+        new.append(arr[-1])
+        new.append(0)
+        return new
              
 
 
