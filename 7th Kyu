@@ -1559,3 +1559,19 @@ def arithmetic_sequence_elements(a, d, n):
         
         return ", ".join(list(map(str,arr))) #converting an array to a list of strings with a comma
     
+#Given an array (a list in Python) of integers and an integer n, find all occurrences of n in the given array and return another array containing all the index positions of n in the given array.
+
+def find_all(array, n):
+    if n not in array :
+        return []
+    
+    else :
+        
+        res = []
+        for i,c in enumerate(array) :
+            if c == n :
+                res.append(i)
+                
+    return res           
+    
+    
