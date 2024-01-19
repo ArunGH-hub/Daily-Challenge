@@ -973,6 +973,12 @@ def parts_sums(arr):
 
         new = list(map(sum,res)) #remember that we cannot sum an individual integer so we can just add on the final number to this list
 
+
+#Given an array of positive integers, replace every element with the least greater element to its right. If there is no greater element to its right, replace it with -1. For instance, given the array
+
+def array_manip(array):
+    return [min([j for j in array[i+1:] if array[i] < j],default = -1) for i in range(len(array))] #nested list comprehension which looks at the greatest elements to it's right
+
         new.append(arr[-1])
         new.append(0)
         return new
