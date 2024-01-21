@@ -1576,3 +1576,8 @@ def find_all(array, n):
     
     def disemvowel(string_):
     return "".join([i for i in string_ if i.lower() not in "aeiou"])
+
+
+#Mumbling
+def accum(st):
+    return "-".join([(c*i).title() for i,c in enumerate(st,start=1)])
