@@ -10,3 +10,11 @@ def lowercase_count(strng):
     letter_pattern = re.findall(regex_pattern,strng)
     
     return len(letter_pattern)
+
+
+#Your program will take in a string and clean out all numeric characters, and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.
+import re
+def string_clean(s):
+    pattern = "\D" #returns a match where the string does not contaain Digits
+    reg = re.compile("\D")
+    return "".join(re.findall(reg,s))
