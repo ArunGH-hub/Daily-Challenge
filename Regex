@@ -1,1 +1,12 @@
+#8th Kyu
 
+#Your task is simply to count the total number of lowercase letters in a string.
+
+def lowercase_count(strng):
+    import re
+    raw_pattern = "[a-z]"
+    regex_pattern = re.compile(raw_pattern)
+    
+    letter_pattern = re.findall(regex_pattern,strng)
+    
+    return len(letter_pattern)
