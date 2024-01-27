@@ -18,3 +18,9 @@ def string_clean(s):
     pattern = "\D" #returns a match where the string does not contaain Digits
     reg = re.compile("\D")
     return "".join(re.findall(reg,s))
+
+
+import re
+def get_number_from_string(st):
+    regex_pattern = re.compile("\d")
+    return int("".join(re.findall(regex_pattern,st)))
