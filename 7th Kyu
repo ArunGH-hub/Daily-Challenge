@@ -1581,3 +1581,10 @@ def find_all(array, n):
 #Mumbling
 def accum(st):
     return "-".join([(c*i).title() for i,c in enumerate(st,start=1)])
+
+
+#He needs you to create a method that can determine how many letters (both uppercase and lowercase ASCII letters) and digits are in a given string.
+
+def count_letters_and_digits(s):
+    import re
+    return len(re.findall(r"\d|[a-zA-Z]",s))
