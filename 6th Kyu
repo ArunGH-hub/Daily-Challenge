@@ -983,5 +983,33 @@ def array_manip(array):
         new.append(0)
         return new
              
+#Born a misinterpretation of this kata, your task here is pretty simple: given an array of values and an amount of beggars, you are supposed to return an array with the sum of what each beggar brings home, assuming they all take regular turns, from the first to the last.
 
+def beggars(values, n):
+    
+    if n == 0 :
+        return []
+    
+    else :
+        count = 0
+        x = 0
+        new = n #keeps a track of the number of beggars, they must go one at a time
+        res = []
+        beggar_p = values[x::new] #x and n are variables that must change according to which beggar's turn it is
+
+
+
+
+
+        while count < n :
+            beggars_home = values[x::new] #take home for the beggars
+            res.append(sum(beggars_home))
+            count += 1 
+            x += 1 
+        new += 1
+
+        return res     
+        
+        
+    
 
