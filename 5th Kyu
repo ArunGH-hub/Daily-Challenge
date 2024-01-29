@@ -156,4 +156,20 @@ def rot13(message):
 def move_zeros(lst):
     return sorted(lst, key = lambda x : x == 0)
     
+#Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. For example:
+
+#url = "http://github.com/carbonfive/raygun"
+import re
+def domain_name(url):
+    if "//" not in url and "www" not in url :
+        return url.split(".")[0]
+    
+    elif "www" in url : #if www is at the beginning of the string
+        return url.split(".")[1]
+    
+    else :
+    
+        idx = url.index("//") #remove the first bit
+        return url[idx+2:].split(".")[0] #removes everything after the dot
+
 
