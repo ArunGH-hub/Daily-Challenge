@@ -24,3 +24,10 @@ import re
 def get_number_from_string(st):
     regex_pattern = re.compile("\d")
     return int("".join(re.findall(regex_pattern,st)))
+
+
+#complete the function/method so that it returns the url with anything after the anchor # removed
+
+def remove_url_anchor(url):
+    import re
+    return re.sub(r"#.*","",url) #replaces everything after # with empty
