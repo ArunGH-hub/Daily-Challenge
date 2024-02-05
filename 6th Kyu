@@ -1010,6 +1010,23 @@ def beggars(values, n):
 
         return res     
         
-        
+      def good_vs_evil(good, evil):
+    races_g = [1,2,3,3,4,10] #worth of good
+    races_b = [1,2,2,2,3,5,10] #worth of bad
+    good = list(map(int,good.split()))
+    evil = list(map(int,evil.split()))
+    
+    import math
+    good_check = sum([math.prod(i) for i in list(zip(good,races_g))]) #sum of good
+    bad_check = sum([math.prod(i) for i in list(zip(evil,races_b))]) #sum of evil
+    
+    if good_check > bad_check :
+        return "Battle Result: Good triumphs over Evil"
+    
+    elif bad_check > good_check :
+        return 'Battle Result: Evil eradicates all trace of Good'
+    
+    else :
+        return 'Battle Result: No victor on this battle field'  
     
 
