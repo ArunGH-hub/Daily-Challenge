@@ -1602,3 +1602,13 @@ def capitalize(s) :
     res.append("".join(odd))
     
     return res
+
+
+#Gordon Ramsay shouts. He shouts and swears. There may be something wrong with him.
+#Anyway, you will be given a string of four words. Your job is to turn them in to Gordon language.
+
+def gordon(a):
+    new =  [f"{i.upper()}!!!!" for i in a.replace("a","@").replace("A","@").split()]
+    
+    final = ["".join(["*" if j in "aeouiAEOUI" else j for j in i]) for i in new] #nested comprehension
+    return " ".join(final)
