@@ -31,3 +31,10 @@ def get_number_from_string(st):
 def remove_url_anchor(url):
     import re
     return re.sub(r"#.*","",url) #replaces everything after # with empty
+
+
+#Let's assume we need "clean" strings. Clean means a string should only contain letters a-z, A-Z and spaces. We assume that there are no double spaces or line breaks.
+
+def remove_chars(s):
+    import re 
+    return "".join(re.findall(r"[\sa-zA-Z]",s)) #don't put round brackets inside
