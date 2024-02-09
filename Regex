@@ -38,3 +38,10 @@ def remove_url_anchor(url):
 def remove_chars(s):
     import re 
     return "".join(re.findall(r"[\sa-zA-Z]",s)) #don't put round brackets inside
+
+
+#Implement the function which should return true if given object is a vowel (meaning a, e, i, o, u, uppercase or lowercase), and false otherwise.
+
+def is_vowel(s): 
+    import re
+    return bool(re.findall(r"^[aeiouAEIOU]$",s,flags=re.IGNORECASE)) #matches the first character
