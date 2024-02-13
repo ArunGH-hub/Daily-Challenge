@@ -1623,3 +1623,8 @@ def vowel_2_index(string):
     
     else :
         return "".join([str(i) if c.lower() in "aeiou" else c for i,c in enumerate(string,start=1)])
+
+
+def validate_word(word):
+    word = word.lower()
+    return len(set([word.count(i) for i in word])) == 1
