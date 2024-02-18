@@ -1628,3 +1628,11 @@ def vowel_2_index(string):
 def validate_word(word):
     word = word.lower()
     return len(set([word.count(i) for i in word])) == 1
+
+def num_obj(s):
+    new = list(map(chr,s)) #creates list of character codes
+    
+    numbers = list(map(str,s)) #converts s to strings
+    return [{key:value} for key,value in zip(numbers,new)]
+
+
