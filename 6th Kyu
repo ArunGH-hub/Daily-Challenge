@@ -1030,3 +1030,7 @@ def beggars(values, n):
         return 'Battle Result: No victor on this battle field'  
     
 
+#Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+def pig_it(text):
+    return " ".join([f"{i[1:]+i[0]}ay" if i.isalpha() else i for i in text.split(" ")])
