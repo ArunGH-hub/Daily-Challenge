@@ -1635,4 +1635,11 @@ def num_obj(s):
     numbers = list(map(str,s)) #converts s to strings
     return [{key:value} for key,value in zip(numbers,new)]
 
+#Given a list of integers values, your job is to return the sum of the values; however, if the same integer value appears multiple times in the list, you can only count it once in your sum.
 
+def unique_sum(lst):
+    if not lst :
+        return None
+    else :
+            
+        return sum(set(lst))
