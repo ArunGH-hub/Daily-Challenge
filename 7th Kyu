@@ -1643,3 +1643,10 @@ def unique_sum(lst):
     else :
             
         return sum(set(lst))
+
+
+#The bloody photocopier is broken... Just as you were sneaking around the office to print off your favourite binary code!
+
+def broken(inp):
+    new = str.maketrans("01","10")
+    return inp.translate(new)
