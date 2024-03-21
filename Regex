@@ -42,6 +42,14 @@ def remove_chars(s):
 
 #Implement the function which should return true if given object is a vowel (meaning a, e, i, o, u, uppercase or lowercase), and false otherwise.
 
+#Beaches are filled with sand, water, fish, and sun. Given a string, calculate how many times the words "Sand", "Water", "Fish", and "Sun" appear without overlapping (regardless of the case).
+
+
+def sum_of_a_beach(beach):
+    import re
+    return len(re.findall(r"Sand|Water|Fish|Sun",beach,flags=re.IGNORECASE))
+
+
 def is_vowel(s): 
     import re
     return bool(re.findall(r"^[aeiouAEIOU]$",s,flags=re.IGNORECASE)) #matches the first character
