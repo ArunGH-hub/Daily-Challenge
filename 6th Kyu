@@ -1038,3 +1038,37 @@ def pig_it(text):
 def manhattan_distance(pointA, pointB):
     new = list(zip(pointA,pointB))
     return sum([abs(i[0]-i[1]) for i in new])
+
+
+def decrypt(test_key):
+    import re
+    new = "".join(re.findall(r"\w",test_key)) #removes all non letters
+    
+    
+    
+    
+    check =  [new.count(i) for i in new.lower()] #convert all to lowercase
+    
+    my_dict = {letter:cnt for letter,cnt in list(zip(new,check))} #makes a dictionary of letter to count
+    
+    
+    
+    
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    
+    res = []
+    
+    for i in list(alphabet):
+        
+        if i in new :
+            res.append(str(my_dict[i]))
+        
+        else :
+            res.append("0")
+        
+    return "".join(res) 
+    
+    
+
+
+
