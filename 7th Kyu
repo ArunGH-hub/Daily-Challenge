@@ -1650,3 +1650,18 @@ def unique_sum(lst):
 def broken(inp):
     new = str.maketrans("01","10")
     return inp.translate(new)
+
+#Given a varying number of integer arguments, return the digits that are not present in any of them.
+
+def unused_digits(*numbers):
+    res = []
+    new = list(map(str,numbers)) #convert to str
+    for i in new :
+        res += i 
+        
+    return  "".join([i for i in list(map(str,range(0,10))) if i not in "".join(set(res))])    
+                
+
+
+
+
