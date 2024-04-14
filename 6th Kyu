@@ -1068,7 +1068,18 @@ def decrypt(test_key):
         
     return "".join(res) 
     
-    
+ #In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+def alphabet_position(text):
+    res = []
+    for i in text.lower():
+        for j in i :
+            if j.isalpha() :
+                res.append(ord(j)-96)
+                
+    return " ".join(list(map(str,res))) #convert ints to strings   
+        
+       
 
 
 
