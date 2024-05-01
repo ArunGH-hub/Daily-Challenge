@@ -1662,6 +1662,25 @@ def unused_digits(*numbers):
     return  "".join([i for i in list(map(str,range(0,10))) if i not in "".join(set(res))])    
                 
 
+#leetcode reverse prefix of the word
+
+def reversePrefix(word, ch):
+    reversed_str = []
+    res = []
+    idx = word.index(ch)
+    for i,c in enumerate(word) :
+        if i <= idx :
+             reversed_str.append(c)
+                
+        else :
+            res.append(c)
+            
+    return "".join(reversed_str[::-1]) + "".join(res)
+            
+                
+                
+                
+                
 
 
 
