@@ -1081,5 +1081,18 @@ def alphabet_position(text):
         
        
 
+#Complete the solution so that it splits the string into pairs of two characters.
 
+def solution(s):
+    if not s :
+        return []
+    
+    else :
+        if len(s) % 2 == 0 : #even length
+            return [s[i:i+2] for i in range(0,len(s),2)] #skips every 2
+
+        else :
+            s = s + "_"
+            return [s[i:i+2] for i in range(0,len(s),2)]
+            
 
