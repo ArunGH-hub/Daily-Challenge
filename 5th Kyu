@@ -180,3 +180,20 @@ def pig_it(text):
 def rot13(message):
     table = str.maketrans("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz","NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm")
     return message.translate(table)
+
+
+#weight for weight 5th kyu
+#The weight of a number will be from now on the sum of its digits.
+
+
+def order_weight(strng):
+    new = list(map(int,strng.split())) #convert to list of numbers
+    weight = [sum(list(map(int,str(i)))) for i in new] #these are the corresponding weights
+    
+    final = list(zip(new,weight))
+    
+    check = sorted(final,key = lambda x : (x[1],str(x[0]))) #sorted final list
+    
+    
+    
+    return " ".join([str(i[0]) for i in check]) #convert final answer to strings
