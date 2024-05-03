@@ -1095,4 +1095,6 @@ def solution(s):
             s = s + "_"
             return [s[i:i+2] for i in range(0,len(s),2)]
             
+def alphabet_position(text):
+    return " ".join([str(ord(i)-96) for i in text.lower() if i.isalpha()])
 
