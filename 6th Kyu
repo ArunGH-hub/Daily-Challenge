@@ -1094,7 +1094,20 @@ def solution(s):
         else :
             s = s + "_"
             return [s[i:i+2] for i in range(0,len(s),2)]
-            
+
+
+
+#Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+#Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+#If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+
+
+def order(sentence):
+    if not sentence :
+        return ""
+    
+    else :
+        return " ".join(sorted(sentence.split(), key = lambda x : sorted(x)))
 def alphabet_position(text):
     return " ".join([str(ord(i)-96) for i in text.lower() if i.isalpha()])
 
