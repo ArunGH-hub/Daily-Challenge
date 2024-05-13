@@ -1686,6 +1686,13 @@ def switcheroo(s):
     return s.translate(table)             
                 
                 
+#largest 5 digit number in a series
+
+def solution(digits):
+    digits = str(digits)
+    
+    
+    return int(sorted([digits[i:i+5] for i in range(0,len(digits)-4)])[-1]) #looks at consecutive numbers
 
 
 
