@@ -197,3 +197,19 @@ def order_weight(strng):
     
     
     return " ".join([str(i[0]) for i in check]) #convert final answer to strings
+
+
+def domain_name(url):
+    import re
+    new = re.sub(r"http://|https://|www.","",url) #sub out the bit at the beginning
+    res = []
+    for i in new :
+        if i != "." :
+            res.append(i)
+            
+        else :
+            break
+            
+    return "".join(res)        
+    
+    
