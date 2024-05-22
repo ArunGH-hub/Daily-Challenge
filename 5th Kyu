@@ -212,4 +212,8 @@ def domain_name(url):
             
     return "".join(res)        
     
+ #hail caesar
+def hail_caesar(enc_str):
+    new = ["".join([chr((ord(j)-ord("a")+13)%26 + ord("a")) for j in i if j.isalpha()]) for i in enc_str.lower().split()] #lower first and shift
     
+    return " ".join(new)
