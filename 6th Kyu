@@ -1111,3 +1111,7 @@ def order(sentence):
 def alphabet_position(text):
     return " ".join([str(ord(i)-96) for i in text.lower() if i.isalpha()])
 
+#count characters in your string
+def count(s):
+    new = [s.count(i) for i in s]
+    return {i:j for i,j in zip(s,new)}
