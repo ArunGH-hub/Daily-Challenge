@@ -1695,4 +1695,8 @@ def solution(digits):
     return int(sorted([digits[i:i+5] for i in range(0,len(digits)-4)])[-1]) #looks at consecutive numbers
 
 
+#http://localhost:8888/notebooks/Untitled7.ipynb
 
+def high_and_low(numbers):
+    new = [int(i) for i in numbers.split()] #convert to numbers
+    return f"{max(new)} {min(new)}"
