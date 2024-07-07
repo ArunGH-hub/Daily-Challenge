@@ -1700,3 +1700,18 @@ def solution(digits):
 def high_and_low(numbers):
     new = [int(i) for i in numbers.split()] #convert to numbers
     return f"{max(new)} {min(new)}"
+
+
+#Write a program that reads in a Lojban string (representing a number less than or equal to 1,000,000) and outputs it in numbers.
+def convert_lojban(lojban):
+    numbers = list(range(0,10))
+    check = ["no","pa","re","ci","vo","mu","xa","ze","bi","so"]
+    my_dict = {check:numbers for check,numbers in zip(check,numbers)}
+
+    new = [lojban[i:i+2] for i in range(0,len(lojban),2)]
+
+    return int("".join([str(my_dict[i]) for i in new]))
+    
+    
+
+
