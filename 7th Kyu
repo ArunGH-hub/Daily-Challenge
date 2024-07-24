@@ -1728,4 +1728,9 @@ def get_middle(s):
     else :
         return "".join([c for i,c in enumerate(s) if i == int(len(s)//2) or i == int(len(s)//2)-1])
             
-    
+  #7th kyu #mumbling
+#i.e. accum("abcd") -> "A-Bb-Ccc-Dddd"
+
+def accum(st):
+    return "-".join([(c*i).capitalize() for i,c in enumerate(st,start=1)])
+  
