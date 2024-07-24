@@ -1719,4 +1719,13 @@ def sum_no_duplicates(l):
     return sum([i for i in l if l.count(i)==1])
     
 
+#get middle
 
+def get_middle(s):
+    if len(s) % 2 != 0 :
+        return "".join([c for i,c in enumerate(s) if i == int(len(s)/2)])
+
+    else :
+        return "".join([c for i,c in enumerate(s) if i == int(len(s)//2) or i == int(len(s)//2)-1])
+            
+    
