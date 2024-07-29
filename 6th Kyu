@@ -1115,3 +1115,19 @@ def alphabet_position(text):
 def count(s):
     new = [s.count(i) for i in s]
     return {i:j for i,j in zip(s,new)}
+
+
+def to_camel_case(text):
+    if not text:
+        return ""
+
+    else :
+        import re
+        new = re.sub(r"-|_"," ",text).split() #sub out dash or underscore and split into words
+        for i in new :
+            if new[0][0].isupper() :
+                return "".join([i.title() for i in new])
+    
+            else :
+                check = "".join([new[i].title() for i in range(1,len(new))]) #skips the first word and capitalizes
+                return f'{"".join(new[0])}{check}'
