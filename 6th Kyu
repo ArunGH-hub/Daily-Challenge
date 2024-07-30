@@ -1131,3 +1131,9 @@ def to_camel_case(text):
             else :
                 check = "".join([new[i].title() for i in range(1,len(new))]) #skips the first word and capitalizes
                 return f'{"".join(new[0])}{check}'
+
+
+#Write a function that returns the count of characters that have to be removed in order to get a string with no consecutive repeats.
+
+def count_repeats(txt):
+    return len([txt[i] for i in range(0,len(txt)-1) if txt[i]==txt[i+1]]) #this works because it counts the repeats, if the last letter is b then it doesn't matter here
