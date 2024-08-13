@@ -1137,3 +1137,28 @@ def to_camel_case(text):
 
 def count_repeats(txt):
     return len([txt[i] for i in range(0,len(txt)-1) if txt[i]==txt[i+1]]) #this works because it counts the repeats, if the last letter is b then it doesn't matter here
+
+
+def format_words(words):
+   
+    if not words :
+        return ""
+
+    elif words is None:
+        return ""
+
+    else :
+        words = [i for i in words if i.isalnum()] #filters out random "" s
+        if len(words) == 1 :
+            return f'{"".join(words)}'
+
+        else :
+        
+            first_bit = words[:-1]
+            new_first = ", ".join(first_bit) #this is the first bit
+        
+            second_bit = words[-1]
+            second_bit_new = f"and {second_bit}"
+    
+            return f"{new_first} {second_bit_new}"
+    
