@@ -217,3 +217,23 @@ def hail_caesar(enc_str):
     new = ["".join([chr((ord(j)-ord("a")+13)%26 + ord("a")) for j in i if j.isalpha()]) for i in enc_str.lower().split()] #lower first and shift
     
     return " ".join(new)
+
+
+#5th kyu
+
+#The marketing team is spending way too much time typing in hashtags.
+#Let's help them with our own Hashtag Generator!
+
+def generate_hashtag(s):
+    if not s :
+        return False
+
+    else :
+    
+        new = "#"+"".join([i.capitalize() for i in s.split()])
+        if len(new) > 140 :
+            return False
+    
+        
+        else :
+            return new
