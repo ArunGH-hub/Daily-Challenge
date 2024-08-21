@@ -1161,4 +1161,12 @@ def format_words(words):
             second_bit_new = f"and {second_bit}"
     
             return f"{new_first} {second_bit_new}"
+
+
+#weird String Case
+
+def to_weird_case(words):
+    
+    
+    return "".join(["".join([j.upper() if i % 2 == 0 else j.lower() for j in c]) for i,c in enumerate(words,start=0)]) #index for each character c
     
