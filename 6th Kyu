@@ -1170,3 +1170,8 @@ def to_weird_case(words):
     
     return "".join(["".join([j.upper() if i % 2 == 0 else j.lower() for j in c]) for i,c in enumerate(words,start=0)]) #index for each character c
     
+
+#Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+
+def count_bits(n):
+    return sum([int(i) for i in bin(n)[2:] if int(i) == 1])
