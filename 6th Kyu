@@ -1185,3 +1185,11 @@ def count(s):
     b = [s.count(i) for i in s]
     return {i:c for i,c in zip(a,b)}
 
+
+def sort_by_bit(arr): 
+    check = sorted([(i, bin(i)[2:]) for i in arr], key = lambda x : (x[1].count("1"),x[0])) #this is how you sort by bits, add two levels - first sort by count of 1s and then sort by the number
+    
+    return [i[0] for i in check] #final result
+
+
+    
