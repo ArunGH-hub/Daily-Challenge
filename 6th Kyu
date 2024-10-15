@@ -1191,5 +1191,19 @@ def sort_by_bit(arr):
     
     return [i[0] for i in check] #final result
 
+#Write a function that returns the count of characters that have to be removed in order to get a string with no consecutive repeats.
+#'abbbbc'  => 'abc'    #  answer: 3
+#'abbcca'  => 'abca'   #  answer: 2
+#'ab cca'  => 'ab ca'  #  answer: 1
 
-    
+
+def count_repeats(txt):
+    count = 0
+    for word in txt.split():
+        for i in range(len(word)-1):
+            if word[i] == word[i+1] :
+                count += 1
+
+    return count
+            
+            
