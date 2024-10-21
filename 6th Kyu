@@ -1206,4 +1206,7 @@ def count_repeats(txt):
 
     return count
             
-            
+ def is_pangram(st):
+    import re
+    new = "".join(re.findall(r"[A-Za-z]",st.lower())) #just keeps the letters and converts to lowercase
+    return len(set(new)) == len("abcdefghijklmnopqrstuvwxyz")           
