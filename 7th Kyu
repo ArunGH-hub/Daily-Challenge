@@ -1734,3 +1734,15 @@ def get_middle(s):
 def accum(st):
     return "-".join([(c*i).capitalize() for i,c in enumerate(st,start=1)])
   
+
+#Write a function that recieves a list of pairs and returns the number of days that the company is represented in the foreign country
+def days_represented(trips):
+    new = [list(range(i,j+1)) for i,j in trips] #break it down to individual days
+
+    final = set() #initialise set
+
+    for i in new :
+        for j in i :
+            final.add(j)
+
+    return len(final)
