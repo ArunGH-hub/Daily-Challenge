@@ -1210,3 +1210,13 @@ def count_repeats(txt):
     import re
     new = "".join(re.findall(r"[A-Za-z]",st.lower())) #just keeps the letters and converts to lowercase
     return len(set(new)) == len("abcdefghijklmnopqrstuvwxyz")           
+
+
+def data_reverse(data):
+    new = [data[i:i+8] for i in range(0,len(data),8)] #moves every 8 bits and splits it into 8
+
+    check = "".join(["".join([str(j) for j in i]) for i in new[::-1]]) #convert to str, nested list comprehension
+
+    return list(map(int,check))
+
+
