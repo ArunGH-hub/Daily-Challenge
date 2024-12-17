@@ -1746,3 +1746,10 @@ def days_represented(trips):
             final.add(j)
 
     return len(final)
+
+
+def absent_vowel(x): 
+    vowels = "aeiou"
+    check = {c:i for i,c in enumerate(vowels)} #dictionary
+    new = [i for i in vowels if i not in x]
+    return check[new[0]]
