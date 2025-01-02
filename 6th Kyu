@@ -1230,3 +1230,23 @@ def duplicate_count(text):
     text = text.lower()
     return len(set([i for i in text if text.count(i) > 1])) #all the letters that appear more than once and set it
 
+
+#Write an algorithm that will identify valid IPv4 addresses in dot-decimal format. IPs should be considered valid if they consist of four octets, with values between 0 and 255, inclusive.
+
+def is_valid_IP(strng):
+    import re
+    check = "".join(re.findall(r"[0-9]|\.",strng)) #validation check that the string only contains numbers and dots
+    if strng != check : 
+        return False
+
+    else :    
+        
+        new = [int(i) for i in strng.split(".")] #split into quartets
+        res =  []
+        for i in new :
+            if i in range(0,256) : #checks if the number is in the range 0 to 256
+                res.append(i)
+    
+        return len(res) == 4   #checks there are only 4 segments
+    
+            
