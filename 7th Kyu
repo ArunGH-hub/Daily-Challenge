@@ -1753,3 +1753,14 @@ def absent_vowel(x):
     check = {c:i for i,c in enumerate(vowels)} #dictionary
     new = [i for i in vowels if i not in x]
     return check[new[0]]
+
+#Count the divisors of a number
+#7th kyu
+#Count the number of divisors of a positive integer n.
+#Random tests go up to n = 500000, but fixed tests go higher.
+
+def divisors(n):
+    return len([i for i in range(1,n+1) if n % i == 0])
+        
+        
+
