@@ -248,3 +248,11 @@ def domain_name(url):
     new = re.sub(r"www.|https://|http://","",url) #removes the prefix
     return [i for i in new.split(".")][0] #split and remove everything after dot
 
+
+#5th kyu 
+#mean square error
+
+def solution(array_a, array_b):
+    new = [abs(i-j)**2 for i,j in zip(array_a,array_b)] #combines the abs value difference between the two arrays and squares each
+    return sum(new) / len(array_a)
+
