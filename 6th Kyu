@@ -1250,3 +1250,9 @@ def is_valid_IP(strng):
         return len(res) == 4   #checks there are only 4 segments
     
             
+#bit counting
+
+def count_bits(n):
+    import re
+    n = str(bin(int(n)))
+    return len(re.findall(r"[1]",n)) #re.findall to find all the 1s
