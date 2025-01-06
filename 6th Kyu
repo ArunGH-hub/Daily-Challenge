@@ -1268,8 +1268,22 @@ def solve(s) :
     new = re.sub(r"[aeiou]",",",s) #subs out the vowels with a comma
     return max([sum([(ord(j)-96) for j in i]) for i in new.split(",")]) #nested list comprehension that sums the count of the values per consonant string
     
-   
+
+#Arabian string
+#6th kyu
+#You must create a method that can convert a string from any format into PascalCase. This must support symbols too.
+
+
+def camelize(str_):
+    new = "".join([i if i.isalnum() else "," for i in str_]) #replaces everything which is not an alpha or numeric character with space
+    return "".join([i.capitalize() for i in new.split(",")]) #splits it up by comma and capitalizes the first letter
     
+
+
+
+
+
+
     
     
     
