@@ -1256,3 +1256,21 @@ def count_bits(n):
     import re
     n = str(bin(int(n)))
     return len(re.findall(r"[1]",n)) #re.findall to find all the 1s
+
+
+#6th kyu
+#consonant value
+#Given a lowercase string that has alphabetic characters only and no spaces, return the highest value of consonant substrings. Consonants are any letters of the alphabet except "aeiou".
+
+
+def solve(s) :
+    import re
+    new = re.sub(r"[aeiou]",",",s) #subs out the vowels with a comma
+    return max([sum([(ord(j)-96) for j in i]) for i in new.split(",")]) #nested list comprehension that sums the count of the values per consonant string
+    
+   
+    
+    
+    
+    
+    
