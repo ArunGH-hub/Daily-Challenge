@@ -1287,6 +1287,17 @@ def count(s):
     return  {i:s.count(i) for i in s}
 
 
+#Create a function that returns the lowest product of 4 consecutive digits in a number given as a string.
+def lowest_product(num):
+    if len(num) < 4 :
+        return "Number is too small"
+
+    else :
+        
+        import math
+        new = [int(num[i:i+4]) for i in range(0,len(num)-3)] #splits the string into consecutive pairs of 4
+        return min([math.prod(list(map(int,str(i)))) for i in new])
+    
 
 
 
