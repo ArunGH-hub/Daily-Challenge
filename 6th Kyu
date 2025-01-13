@@ -1301,7 +1301,19 @@ def lowest_product(num):
 
 
 
+#break camel case
 
+def solution(s):
+    res = ""
+    for i,c in enumerate(s) :
+        if c.isupper() and i != 0:
+            res += f" {c}"
+
+        else :
+            res += c
+
+    return res
+            
     
     
     
