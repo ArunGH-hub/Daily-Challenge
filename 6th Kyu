@@ -1321,6 +1321,15 @@ def hamming(a,b):
     res = []
     return len([(i,j) for i,j in list(zip(a,b)) if i != j])
     
+def remove(s) : #remove consecutive duplicates from a string
+    res = []
+    new = [s[i] for i in range(len(s)-1) if s[i] != s[i+1]]
+    return f"{"".join(new)}{s[-1]}" #adds the last letter on
 
-    
+
+def dup(array):
+    return [remove(i) for i in array] #uses the remove function we created
+        
+        
+     
     
