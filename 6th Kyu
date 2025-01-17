@@ -1330,6 +1330,11 @@ def remove(s) : #remove consecutive duplicates from a string
 def dup(array):
     return [remove(i) for i in array] #uses the remove function we created
         
-        
-     
+#sort arrays (ignoring case)
+
+#Sort the given array of strings in alphabetical order, case insensitive. For example:
+
+def sortme(words):
+    
+    return sorted(words, key = lambda x : x.lower())  
     
