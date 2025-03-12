@@ -1,1 +1,8 @@
+#leetcode string
+#find first and last position of element in sorted array
 
+def searchRange(nums,target):
+    if target in nums :
+        return [i for i,c in enumerate(nums) if c == target]
+    else :
+        return [-1,-1]
