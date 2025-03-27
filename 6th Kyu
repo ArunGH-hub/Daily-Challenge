@@ -1337,4 +1337,14 @@ def dup(array):
 def sortme(words):
     
     return sorted(words, key = lambda x : x.lower())  
-    
+
+
+
+#Highest Rank Number in an Array
+#6th kyu
+#Complete the method which returns the number which is most frequent in the given input array. If there is a tie for most frequent number, return the largest number among them.
+
+
+def highest_rank(arr):
+    new = sorted([(i,arr.count(i)) for i in arr],key = lambda x : (x[1],x[0])) #sorts by the count first and then the number
+    return new[-1][0] #returns the highest value
