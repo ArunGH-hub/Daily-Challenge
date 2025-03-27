@@ -1773,3 +1773,4 @@ def divisors(n):
 def longest(a1, a2):
     return "".join(sorted((set(f"{a1}{a2}"))))
 
+
