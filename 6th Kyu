@@ -1348,3 +1348,18 @@ def sortme(words):
 def highest_rank(arr):
     new = sorted([(i,arr.count(i)) for i in arr],key = lambda x : (x[1],x[0])) #sorts by the count first and then the number
     return new[-1][0] #returns the highest value
+
+
+#Lottery Ticket
+def bingo(ticket,win):
+    codes = [[ord(j) for j in i[0] if ord(j) == i[1]] for i in ticket] #list of codes seperated using nested list comprehension, returns the character code if it matches
+    
+    res = []
+    for i in codes :
+        if len(i) > 0 :
+            res.append(i)
+    if len(res) < win:
+        return "Loser!"
+    else :
+        return "Winner!"
+                
