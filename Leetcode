@@ -6,3 +6,14 @@ def searchRange(nums,target):
         return [i for i,c in enumerate(nums) if c == target]
     else :
         return [-1,-1]
+
+
+import pandas as pd
+
+def big_countries(world: pd.DataFrame) -> pd.DataFrame:
+    con1 = world["area"] >= 3000000 
+    con2 = world["population"] >= 25000000
+
+    new = world[["name","population","area"]] #returns name,population and area columns
+
+    return new[con1 | con2]
