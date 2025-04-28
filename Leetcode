@@ -17,3 +17,12 @@ def big_countries(world: pd.DataFrame) -> pd.DataFrame:
     new = world[["name","population","area"]] #returns name,population and area columns
 
     return new[con1 | con2]
+
+
+import pandas as pd
+
+def find_products(products: pd.DataFrame) -> pd.DataFrame:
+    con1 = products["low_fats"] == "Y"
+    con2 = products["recyclable"] == "Y"
+
+    return pd.DataFrame(products["product_id"][con1 & con2])  #answer
