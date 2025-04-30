@@ -26,3 +26,29 @@ def find_products(products: pd.DataFrame) -> pd.DataFrame:
     con2 = products["recyclable"] == "Y"
 
     return pd.DataFrame(products["product_id"][con1 & con2])  #answer
+
+
+import pandas as pd
+
+def article_views(views: pd.DataFrame) -> pd.DataFrame:
+    df = views
+    con1 = df["author_id"] == df["viewer_id"] #this returns all the rows of the dataframe whereby author_id is the same a viewer
+
+    final = df[con1] #this is the new dataframe now
+
+    check = final.sort_values(by="viewer_id",ascending=False) #sorted in ascending order
+
+    new = check.rename(columns = {"viewer_id" : "id"}) #renamed the viewed column
+
+    last = new["id"].unique() #displays only the unique ids
+
+    answer = new[["id"]][0:2] #you can just use slicing like ths
+
+   #now sort answer
+
+    return answer.sort_values(by="id",ascending = True)
+
+
+
+
+
