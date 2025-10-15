@@ -1362,4 +1362,14 @@ def bingo(ticket,win):
         return "Loser!"
     else :
         return "Winner!"
-                
+
+#split strings
+
+def solution(s):
+    if len(s) % 2 != 0 : #checking if odd
+        s = f"{s}_"
+
+    else :
+        s = s
+
+    return [s[i:i+2] for i in range(0,len(s)-1,2)] #iterate over the range by step
